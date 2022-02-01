@@ -9,13 +9,38 @@
     <atom:link href="https://dl137584.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 01 Feb 2022 08:22:43 GMT</pubDate>
+    <pubDate>Tue, 01 Feb 2022 08:47:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
+      <title>[And] Glide에서 비트맵 이미지가 GC되는 과정</title>
+      <link>https://dl137584.github.io/2022/02/01/004-Glide%EC%97%90%EC%84%9C-%EB%B9%84%ED%8A%B8%EB%A7%B5-%EC%9D%B4%EB%AF%B8%EC%A7%80%EA%B0%80-GC%EB%90%98%EB%8A%94-%EA%B3%BC%EC%A0%95/</link>
+      <guid>https://dl137584.github.io/2022/02/01/004-Glide%EC%97%90%EC%84%9C-%EB%B9%84%ED%8A%B8%EB%A7%B5-%EC%9D%B4%EB%AF%B8%EC%A7%80%EA%B0%80-GC%EB%90%98%EB%8A%94-%EA%B3%BC%EC%A0%95/</guid>
+      <pubDate>Tue, 01 Feb 2022 08:26:47 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h1 id=&quot;개요&quot;&gt;&lt;a href=&quot;#개요&quot; class=&quot;headerlink&quot; title=&quot;개요&quot;&gt;&lt;/a&gt;개요&lt;/h1&gt;&lt;p&gt;위의 공식 문서에서 나와있는 바와 같이 기본적으로 Glide로 비트맵을 관리하는 걸 추천하고 있다.&lt;/p&gt;
+&lt;p&gt;&lt;img sr</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h1><p>위의 공식 문서에서 나와있는 바와 같이 기본적으로 Glide로 비트맵을 관리하는 걸 추천하고 있다.</p><p><img src="/assets/images/4_bitmap_gc_in_glide_1.png"></p><p>이를 관리해줘야 하는 이유는 다음과 같다.</p><blockquote><p>앱에서 대량의 비트맵 데이터를 표시하면 OutOfMemoryError 오류가 발생할 수 있습니다.</p></blockquote><p>OutOfMemory 오류를 방지하기 위하여 안드로이드에서는 <a href="https://developer.android.com/reference/android/graphics/Bitmap?hl=ko#recycle()">recycle()</a> 기능을 제공하는데, 이 메소드를 실행하면 비트맵에 사용한 메모리를 회수할 수 있다. 즉, 이 메소드를 호출함으로써 해당 비트맵은 GC의 대상이 된다. 당연히 해당 비트맵을 더이상 사용하지 않을 거라고 확정된 시점에 호출해야한다.</p><br><h1 id="Glide는-비트맵의-메모리를-어떻게-관리하고-있는가"><a href="#Glide는-비트맵의-메모리를-어떻게-관리하고-있는가" class="headerlink" title="Glide는 비트맵의 메모리를 어떻게 관리하고 있는가?"></a>Glide는 비트맵의 메모리를 어떻게 관리하고 있는가?</h1><p>위와 같은 방법으로 오류를 해결하긴 했으나 정확히 Glide에서 Bitmap의 메모리 관리를 어떻게 하는지 감이 안 잡혔더랬다. 그래서 참고삼아 다음 내용을 같이 살펴보면 좋을 것 같다.</p><p>잘 살펴보면 위의 오류 내용을 담은 스샷에서 LruResourceCache 와 같은 단어를 볼 수 있다. <a href="https://www.notion.so/vs-afbdf4b7739647969997e16fd79e7507">메모리 캐시 vs 디스크 캐시</a> 의 내용에 따르면 <code>비트맵 캐싱은 LruCache를 사용하는 대표적인 예</code>다. 여기서 힌트를 얻어서 Glide를 적용하면서 설정했던 BitmapPool 사이즈 디폴트값을 보자. 관련 코드는 다음과 같다.</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 비트맵 풀: The default size is based on the screen size and density of the device</span></span><br><span class="line"><span class="keyword">int</span> bitmapPoolSizeBytes = <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">30</span>; <span class="comment">// 30mb</span></span><br><span class="line">builder.setBitmapPool(<span class="keyword">new</span> LruBitmapPool(bitmapPoolSizeBytes));</span><br></pre></td></tr></table></figure><p>BitmapPool 사이즈는 단말의 스크린사이즈와 density 값에 따라 달라진다고 나와있다.</p><br><h1 id="Glide에서-Bitmap의-라이프사이클-링크"><a href="#Glide에서-Bitmap의-라이프사이클-링크" class="headerlink" title="Glide에서 Bitmap의 라이프사이클 링크"></a>Glide에서 Bitmap의 라이프사이클 <a href="https://github.com/bumptech/glide/issues/483#issuecomment-108193950">링크</a></h1><p>Glide에서 비트맵을 관리하는 데에 있어 일반적인 생명주기는 다음과 같다.</p><p><strong>InputStream -&gt; Bitmap -&gt; View -&gt; Memory Cache -&gt; Bitmap Pool -&gt; Recycle</strong></p><h2 id="해당-링크-해석본"><a href="#해당-링크-해석본" class="headerlink" title="해당 링크 해석본"></a>해당 링크 해석본</h2><p>비트맵은 메모리 캐시 또는 BitmapPool에서 View(또는 target) 및 Loop로 이동할 수도 있습니다. 디코딩 파이프 라인 (예 : 변환을 통해) 중에 리소스를 수동으로 재활용하는 경우 비트맵이 표시되지 않고 recycled state가 될 수도 있습니다. 그렇지 않으면 비트맵이 크기 제약으로 인해 제거될 때 메모리 캐시에서 BitmapPool로, BitmapPool에서 recycled state로 이동합니다.</p><p>“Cannot obtain size for recycled Bitmap” 오류는 Recycle state에 도달한 비트맵을 그리려고 할 때 발생합니다. 결코 발생해서는 안되지만 다음과 같은 몇 가지 시나리오에서 발생할 수 있습니다.</p><ol><li><p>변환 중에 디코딩 프로세스 중에 비트맵을 수동으로 recycle할 경우</p><p> 이 원인은 일반적이지 않은 브랜치에서 커스텀 변환을 하지 않는 한 이런 상황을 꽤 자주 볼 수 있습니다.</p></li><li><p>디코딩 프로세스 중, 변환 중에 두 번 이상 Pool에 비트맵을 반환한 경우</p><p> 이 경우 문제의 원인을 파악하기 쉽습니다. 비트맵이 Pool에서 제거되지 않고 Pool에 여러 번 추가되면 다른 이미지가 동시에 표시되어, 두 개의 이미지 중 하나는 올바르게 표시되고 다른 하나는 잘못 표시 될 수 있습니다. 게다가 다른 뷰에서 참조하는 동안 동시에 recycle 될 수도 있습니다.</p></li><li><p>onLoadCleared가 호출된 후에도 계속 리소스를 참조하거나, 또는 해당 Target이 지워진 후 Target에 로드된 리소스를 참조한 경우</p><p> 커스텀 target을 사용하는 경우 발생할 수 있습니다.</p></li></ol><p>안타깝게도 비트맵을 추적하기 위해 수동 참조 계산을 수행해야하므로 이러한 종류의 버그를 추적하는 것이 매우 어려울 수 있습니다.<br>BitmapPool의 크기를 크게 줄이거나 BitmapPoolAdapter를 사용하여 충돌이 더 자주 발생하는지 확인하십시오. 메모리 캐시의 크기를 줄일 수도 있습니다. 두 경우 모두 파이프 라인의 길이를 줄입니다. 이는 Bitmap이 Recycled state에 더 빨리 도달하여 오류가 더 자주 발생할 수 있음을 의미합니다. 또한 비트맵 렌더링 오류, 기록 된 GL 경고 또는 다른 이미지 대신 잘못된 이미지가 나타나는지 주시하십시오. 이 모든 것은 버그를 재현한 신호입니다.</p><br><h1 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h1><p>따라서 Glide는 변환된 Bitmap을 내부적으로 recycle하기 때문에 <code>imageView.setRecycler()</code>하지 않아도 된다.</p>]]></content:encoded>
+      
+      
+      <category domain="https://dl137584.github.io/categories/Android/">Android</category>
+      
+      
+      
+      <comments>https://dl137584.github.io/2022/02/01/004-Glide%EC%97%90%EC%84%9C-%EB%B9%84%ED%8A%B8%EB%A7%B5-%EC%9D%B4%EB%AF%B8%EC%A7%80%EA%B0%80-GC%EB%90%98%EB%8A%94-%EA%B3%BC%EC%A0%95/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
       <title>[And] 웹뷰에서 동작하는 페이스북 로그인이 deprecated됨</title>
-      <link>https://dl137584.github.io/2022/02/01/%EC%9B%B9%EB%B7%B0%EC%97%90%EC%84%9C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81-%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%9D%B4-deprecated%EB%90%A8/</link>
-      <guid>https://dl137584.github.io/2022/02/01/%EC%9B%B9%EB%B7%B0%EC%97%90%EC%84%9C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81-%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%9D%B4-deprecated%EB%90%A8/</guid>
+      <link>https://dl137584.github.io/2022/02/01/003-%EC%9B%B9%EB%B7%B0%EC%97%90%EC%84%9C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81-%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%9D%B4-deprecated%EB%90%A8/</link>
+      <guid>https://dl137584.github.io/2022/02/01/003-%EC%9B%B9%EB%B7%B0%EC%97%90%EC%84%9C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81-%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%9D%B4-deprecated%EB%90%A8/</guid>
       <pubDate>Tue, 01 Feb 2022 05:59:31 GMT</pubDate>
       
         
@@ -32,14 +57,14 @@
       
       
       
-      <comments>https://dl137584.github.io/2022/02/01/%EC%9B%B9%EB%B7%B0%EC%97%90%EC%84%9C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81-%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%9D%B4-deprecated%EB%90%A8/#disqus_thread</comments>
+      <comments>https://dl137584.github.io/2022/02/01/003-%EC%9B%B9%EB%B7%B0%EC%97%90%EC%84%9C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81-%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%9D%B4-deprecated%EB%90%A8/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>JCenter 지원종료</title>
-      <link>https://dl137584.github.io/2022/01/31/JCenter-%EC%A7%80%EC%9B%90%EC%A2%85%EB%A3%8C/</link>
-      <guid>https://dl137584.github.io/2022/01/31/JCenter-%EC%A7%80%EC%9B%90%EC%A2%85%EB%A3%8C/</guid>
+      <title>[And] JCenter 지원종료</title>
+      <link>https://dl137584.github.io/2022/01/31/002-JCenter-%EC%A7%80%EC%9B%90%EC%A2%85%EB%A3%8C/</link>
+      <guid>https://dl137584.github.io/2022/01/31/002-JCenter-%EC%A7%80%EC%9B%90%EC%A2%85%EB%A3%8C/</guid>
       <pubDate>Mon, 31 Jan 2022 06:30:00 GMT</pubDate>
       
         
@@ -56,7 +81,7 @@
       
       
       
-      <comments>https://dl137584.github.io/2022/01/31/JCenter-%EC%A7%80%EC%9B%90%EC%A2%85%EB%A3%8C/#disqus_thread</comments>
+      <comments>https://dl137584.github.io/2022/01/31/002-JCenter-%EC%A7%80%EC%9B%90%EC%A2%85%EB%A3%8C/#disqus_thread</comments>
       
     </item>
     
