@@ -4,7 +4,12 @@
 
     <sitemap>
         <loc>https://dl137584.github.io/post-sitemap.xml</loc>
-        <lastmod>2022-01-31T07:40:08.212Z</lastmod>
+        <lastmod>2022-02-01T06:00:32.715Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://dl137584.github.io/category-sitemap.xml</loc>
+        <lastmod>2022-02-01T06:00:32.715Z</lastmod>
     </sitemap>
 
 </sitemapindex>
