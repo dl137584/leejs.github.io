@@ -9,24 +9,32 @@
 
 
     <url>
-        <loc>https://dl137584.github.io/2022/02/01/004-Glide%EC%97%90%EC%84%9C-%EB%B9%84%ED%8A%B8%EB%A7%B5-%EC%9D%B4%EB%AF%B8%EC%A7%80%EA%B0%80-GC%EB%90%98%EB%8A%94-%EA%B3%BC%EC%A0%95/</loc>
-        <lastmod>2022-02-01T09:57:25.691Z</lastmod>
+        <loc>https://dl137584.github.io/2022/02/01/004-the-way-bitmap-gc-in-glide/</loc>
+        <lastmod>2022-02-04T12:57:16.961Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://dl137584.github.io/2022/01/31/002-JCenter-%EC%A7%80%EC%9B%90%EC%A2%85%EB%A3%8C/</loc>
-        <lastmod>2022-02-01T09:57:10.731Z</lastmod>
+        <loc>https://dl137584.github.io/2022/01/31/002-jcenter-shutdown/</loc>
+        <lastmod>2022-02-04T12:56:18.897Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://dl137584.github.io/2022/02/01/003-%EC%9B%B9%EB%B7%B0%EC%97%90%EC%84%9C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81-%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%9D%B4-deprecated%EB%90%A8/</loc>
-        <lastmod>2022-02-01T08:31:04.962Z</lastmod>
+        <loc>https://dl137584.github.io/2022/02/04/005-the-difference-between-concurrency-and-parallelism-in-rust/</loc>
+        <lastmod>2022-02-04T12:55:54.446Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://dl137584.github.io/2022/02/01/003-deprecated-facebook-login-in-android/</loc>
+        <lastmod>2022-02-04T12:55:51.562Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
