@@ -225,7 +225,7 @@
 <p><img src="/assets/images/007-13.png" alt="1"></p>
 <p><img src="/assets/images/007-14.png" alt="2"></p>
 <p><img src="/assets/images/007-15.png" alt="3"></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-05T06:29:13.984Z" title="2022. 2. 5. 오후 3:29:13">2022-02-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-05T06:34:11.852Z" title="2022. 2. 5. 오후 3:34:11">2022-02-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
 <li>참고: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.cv-learn.com/20201124-Notion-blog-to-Github-blog/">링크</a></li>
 </ul>
 <h3 id="1-노션의-단점"><a href="#1-노션의-단점" class="headerlink" title="(1) 노션의 단점"></a><strong>(1) 노션의 단점</strong></h3><ul>
@@ -342,6 +342,11 @@
 
 <h3 id="2-이미지-폴더-생성"><a href="#2-이미지-폴더-생성" class="headerlink" title="(2) 이미지 폴더 생성"></a><strong>(2) 이미지 폴더 생성</strong></h3><p><code>public/</code>에 <code>assets/images</code> 폴더를 만들어 그 아래에 이미지 파일을 넣는다.</p>
 <p>이렇게 되면 <code>![](/assets/images/image01.png)</code>와 같이 접근할 수 있다.</p>
+<blockquote>
+<p>주의 &gt; <code>_config.yml</code>에서 post_asset_folder 속성을 true로 하고 생성되는 폴더에 이미지 파일을 넣는 방식은 <code>![](./image01.png)</code>처럼 상대경로를 사용할 수 있다.</p>
+<p>그런데 테스트하다보니 포스팅을 클릭하여 나타난 페이지에서는 정상적으로 이미지가 노출되었으나 사이드메뉴의 카테고리 중 하나를 클릭했을 때 페이지에서 상대경로가 맞지 않아 이미지가 깨지는 현상이 발견되었다.</p>
+<p>따라서 icarus 테마를 사용하면 절대경로를 사용해야할 것으로 보인다.</p>
+</blockquote>
 <h3 id="3-새-페이지-생성"><a href="#3-새-페이지-생성" class="headerlink" title="(3) 새 페이지 생성"></a><strong>(3) 새 페이지 생성</strong></h3><p>페이지는 생성할 경우 해당 페이지명으로 된 폴더와 하위에 index.html 파일이 생성되며 포스트와 다르게 상단 탭에 연결할 수 있는 것으로 보임. 따라서 category와 tag는 사용할 수 없고 about처럼 상단에 추가할 수 있다.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;page&quot;</span><br></pre></td></tr></table></figure>
 
