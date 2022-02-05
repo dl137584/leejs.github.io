@@ -89,7 +89,7 @@
 <p>GlideApp을 통해 이미지를 로드해야지만이 CustomGlideModule에서 정의한 설정을 따른다.</p>
 <p>기본적으로 Glide와 사용에 지장이 있을 정도로 방식이 다르지 않다.</p>
 <p>단, GlideApp은 Glide와는 다르게 일부 RequestOptions를 통해서만 호출할 수 있었던 속성들을 다이렉트로 컨트롤할 수 있게 된다. 이는 공식문서에서 일부 예제들을 통해 비교할 수 있다.</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-05T03:52:02.000Z" title="2022. 2. 5. 오후 12:52:02">2022-02-05</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-05T04:35:47.662Z" title="2022. 2. 5. 오후 1:35:47">2022-02-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Android/">Android</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/05/008-glide-v4/">[Android / Glide] Glide v4 적용</a></h1><div class="content"><h1 id="1-시작하기"><a href="#1-시작하기" class="headerlink" title="1. 시작하기"></a>1. 시작하기</h1><ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-05T03:52:02.000Z" title="2022. 2. 5. 오후 12:52:02">2022-02-05</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-05T06:23:26.254Z" title="2022. 2. 5. 오후 3:23:26">2022-02-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Android/">Android</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/05/008-glide-v4/">[Android / Glide] Glide v4 적용</a></h1><div class="content"><h1 id="1-시작하기"><a href="#1-시작하기" class="headerlink" title="1. 시작하기"></a>1. 시작하기</h1><ul>
 <li><em><a target="_blank" rel="external nofollow noopener noreferrer" href="https://bumptech.github.io/glide/doc/configuration.html">Glide v4 공식 문서</a>(영어)</em></li>
 <li><em>찰스의 안드로이드 - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.charlezz.com/wordpress/wp-content/uploads/2020/10/www.charlezz.com-glide-v4-glide-v4--by-charlezz.pdf">Glide v4</a> 한글 번역</em></li>
 <li>*(주: 2016년 자료) 장범석님의 개발일지 - <a target="_blank" rel="external nofollow noopener noreferrer" href="http://dktfrmaster.blogspot.com/2016/09/glide.html">Glide 사용법*</a> (feat. 메모리/디스크 캐시 설명)</li>
@@ -163,7 +163,7 @@
 <p>디스크 캐시의 모든 항목을 지운다.</p>
 <p>앱에서 실제로 테스트 해보니 캐시메모리의 디폴트 사이즈인 250MB를 채운 후 clearDiskCache()를 호출했을 때 변화는 다음과 같았다.</p>
 <p>(Glide 외의 다른 캐시 데이터로 인해 왼쪽 before 사진에서는 250MB보다 약간 오버된 상태이다.)</p>
-<p><img src="./008-01.png"></p>
+<p><img src="/assets/images/008-01.png"></p>
 <h1 id="6-전환-Transitions"><a href="#6-전환-Transitions" class="headerlink" title="6. 전환 - Transitions"></a>6. 전환 - Transitions</h1><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;</span><br><span class="line"></span><br><span class="line">Glide.with(context)</span><br><span class="line">    .load(url)</span><br><span class="line">    .transition(withCrossFade()) <span class="comment">// optional</span></span><br><span class="line">    .into(view);</span><br></pre></td></tr></table></figure>
 
 <p><code>Glide v4 does NOT apply a cross fade or any other transition by default.</code></p>
@@ -225,7 +225,7 @@
 <p><img src="/assets/images/007-13.png" alt="1"></p>
 <p><img src="/assets/images/007-14.png" alt="2"></p>
 <p><img src="/assets/images/007-15.png" alt="3"></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-05T06:00:11.827Z" title="2022. 2. 5. 오후 3:00:11">2022-02-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-05T06:23:17.938Z" title="2022. 2. 5. 오후 3:23:17">2022-02-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
 <li>참고: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.cv-learn.com/20201124-Notion-blog-to-Github-blog/">링크</a></li>
 </ul>
 <h3 id="1-노션의-단점"><a href="#1-노션의-단점" class="headerlink" title="(1) 노션의 단점"></a><strong>(1) 노션의 단점</strong></h3><ul>
@@ -241,7 +241,7 @@
 <ul>
 <li><p>목차를 한 눈에 볼 수 없음.</p>
 <p>  → Hexo(이카루스 테마)로 해보니 목차(toc)를 노출시킬 수 있게됨. 사이드바에 노출하여 사이드바를 고정(sticky)시켜두니 정말 편해졌다.</p>
-<p>  <img src="./006-01.png" alt="목차(toc)"></p>
+<p>  <img src="/assets/images/006-01.png" alt="목차(toc)"></p>
 </li>
 <li><p>목차를 만들었을 때 그 목차 지점으로 가는 URL을 생성할 수 없음.</p>
 <p>  → 목차(toc)를 노출시킬 경우 URL에 앵커(#)으로 어떤 제목으로 가는 링크가 제공됨.</p>
@@ -284,7 +284,7 @@
 </li>
 <li><p>목차 생성 시 일부 생략되는 경우가 있음. 상위 헤더와 같은 페이지에 노출되는 하위 헤더는 생략되는 것으로 보임.</p>
 <p>  → 단, 앵커를 임의로 생성하는 데에는 문제가 없어서 일단 보류. 필요한 링크는 목차에 뜨지 않아도 내가 만들면 됨.</p>
-<p>  <img src="./006-03.PNG"></p>
+<p>  <img src="/assets/images/006-03.PNG"></p>
 </li>
 </ul>
 <h3 id="5-노션의-장점"><a href="#5-노션의-장점" class="headerlink" title="(5) 노션의 장점"></a><strong>(5) 노션의 장점</strong></h3><p>노션의 이용을 병행하려고 보니 장점을 빼놓을 수가 없다.</p>
@@ -349,7 +349,7 @@
 <h3 id="3-새-페이지-생성"><a href="#3-새-페이지-생성" class="headerlink" title="(3) 새 페이지 생성"></a><strong>(3) 새 페이지 생성</strong></h3><p>페이지는 생성할 경우 해당 페이지명으로 된 폴더와 하위에 index.html 파일이 생성되며 포스트와 다르게 상단 탭에 연결할 수 있는 것으로 보임. 따라서 category와 tag는 사용할 수 없고 about처럼 상단에 추가할 수 있다.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;page&quot;</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-Scaffolds-머리말-속성"><a href="#4-Scaffolds-머리말-속성" class="headerlink" title="(4) Scaffolds(머리말) 속성"></a><strong>(4) Scaffolds(머리말) 속성</strong></h3><p><img src="./006-02.png"></p>
+<h3 id="4-Scaffolds-머리말-속성"><a href="#4-Scaffolds-머리말-속성" class="headerlink" title="(4) Scaffolds(머리말) 속성"></a><strong>(4) Scaffolds(머리말) 속성</strong></h3><p><img src="/assets/images/006-02.png"></p>
 <ul>
 <li>title  대괄호가 잘 안 들어가서 이스케이프문자를 넣어야하나했는데 그냥 큰따옴표로 묶어서 해결해버림.</li>
 <li>date  내가 지정해주지 않아도 자동으로 DB에 발행일이 들어가는가 보더라. 딱히 그럴 일이 없어서 이게 수정이 되는지는 확인 안해봄.</li>
