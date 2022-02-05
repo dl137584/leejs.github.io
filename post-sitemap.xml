@@ -9,16 +9,8 @@
 
 
     <url>
-        <loc>https://dl137584.github.io/2022/02/04/007-blog-apply-seo/</loc>
-        <lastmod>2022-02-05T06:48:02.517Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://dl137584.github.io/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/</loc>
-        <lastmod>2022-02-05T06:37:21.186Z</lastmod>
+        <lastmod>2022-02-05T11:10:03.282Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,7 +18,7 @@
 
     <url>
         <loc>https://dl137584.github.io/2022/02/05/008-glide-v4/</loc>
-        <lastmod>2022-02-05T06:23:26.254Z</lastmod>
+        <lastmod>2022-02-05T11:09:36.730Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -34,7 +26,7 @@
 
     <url>
         <loc>https://dl137584.github.io/2022/02/05/009-the-way-to-create-glideapp/</loc>
-        <lastmod>2022-02-05T04:09:46.362Z</lastmod>
+        <lastmod>2022-02-05T11:09:33.636Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -42,7 +34,15 @@
 
     <url>
         <loc>https://dl137584.github.io/2022/02/01/003-deprecated-facebook-login-in-android/</loc>
-        <lastmod>2022-02-05T03:54:29.529Z</lastmod>
+        <lastmod>2022-02-05T11:09:23.943Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://dl137584.github.io/2022/02/04/007-blog-apply-seo/</loc>
+        <lastmod>2022-02-05T06:48:02.517Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
