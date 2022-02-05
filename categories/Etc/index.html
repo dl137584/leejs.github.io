@@ -70,7 +70,7 @@
 <p><img src="/assets/images/007-13.png" alt="1"></p>
 <p><img src="/assets/images/007-14.png" alt="2"></p>
 <p><img src="/assets/images/007-15.png" alt="3"></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-05T05:33:51.734Z" title="2022. 2. 5. 오후 2:33:51">2022-02-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-05T05:34:56.695Z" title="2022. 2. 5. 오후 2:34:56">2022-02-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
 <li>참고: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.cv-learn.com/20201124-Notion-blog-to-Github-blog/">링크</a></li>
 </ul>
 <h3 id="1-노션의-단점"><a href="#1-노션의-단점" class="headerlink" title="(1) 노션의 단점"></a><strong>(1) 노션의 단점</strong></h3><ul>
@@ -171,6 +171,9 @@
 <h3 id="2-이미지-폴더-생성"><a href="#2-이미지-폴더-생성" class="headerlink" title="(2) 이미지 폴더 생성"></a><strong>(2) 이미지 폴더 생성</strong></h3><p>이미지 파일을 적용하기 위해 <code>_config.yml</code>에서 post_asset_folder 속성을 true로 해두었다. 이렇게 되면 _posts/에 <code>hexo new post</code>를 했을 때 title과 같은 폴더가 함께 생성되어 이미지 파일을 넣어둘 수 있다.</p>
 <p>이때 <code>hexo g</code> (배포가 아닌 생성만)를 하면 에 원래 포스트의 index.html이 생성되는 곳(<code>.deploy_git/:year/:month/:day/:title/</code> 즉 <code>.deploy_git/&#123;permalink&#125;</code>)에 <code>_posts/title/</code>에 넣어둔 이미지가 자동으로 들어가게 된다.</p>
 <p>따라서 <code>[](./image01.png)</code> 이와 같이 상대경로로 이미지에 접근할 수 있게 된다.</p>
+<blockquote>
+<p>주의&gt; 파일명은 대소구분을 한다. “png”와 “PNG”는 다르다. </p>
+</blockquote>
 <h3 id="3-새-페이지-생성"><a href="#3-새-페이지-생성" class="headerlink" title="(3) 새 페이지 생성"></a><strong>(3) 새 페이지 생성</strong></h3><p>페이지는 생성할 경우 해당 페이지명으로 된 폴더와 하위에 index.html 파일이 생성되며 포스트와 다르게 상단 탭에 연결할 수 있는 것으로 보임. 따라서 category와 tag는 사용할 수 없고 about처럼 상단에 추가할 수 있다.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;page&quot;</span><br></pre></td></tr></table></figure>
 
