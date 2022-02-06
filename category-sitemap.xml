@@ -9,22 +9,29 @@
 
 
     <url>
-        <loc>https://dl137584.github.io/categories/Etc/</loc>
-        <lastmod>2022-02-05T11:10:03.282Z</lastmod>
+        <loc>https://dl137584.github.io/categories/Algorithm/</loc>
+        <lastmod>2022-02-06T02:21:46.845Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://dl137584.github.io/categories/Android/</loc>
-        <lastmod>2022-02-05T11:09:36.730Z</lastmod>
+        <lastmod>2022-02-06T02:21:46.660Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://dl137584.github.io/categories/Translation/</loc>
-        <lastmod>2022-02-04T12:55:54.446Z</lastmod>
+        <lastmod>2022-02-06T02:04:51.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://dl137584.github.io/categories/Etc/</loc>
+        <lastmod>2022-02-06T01:12:03.031Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

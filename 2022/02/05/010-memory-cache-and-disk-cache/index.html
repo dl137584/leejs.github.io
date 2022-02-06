@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8868044834754772" crossorigin="anonymous"></script><title>[Android] 메모리 캐시와 디스크 캐시 - leejs&#039;s blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="leejs&#039;s blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="leejs&#039;s blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="브라우저에서의 메모리&amp;#x2F;디스크 캐시메모리 캐시 vs 디스크 캐시 :: 마이구미 (정리잘되어있음) 아래는 해당 링크의 요약본이다. 브라우저 측면이 아닌 하드웨어 측면에서 보면, 관련설명 잘 되어있는 추천영상: [bRd 3D] CPU는 어떻게 작동할까? 유투브링크 디스크 캐시는 하드디스크에 접근하는 시간을 개선하기 위해 RAM에 저장하는 기법이다. 캐시 메모리는"><meta property="og:type" content="blog"><meta property="og:title" content="[Android] 메모리 캐시와 디스크 캐시"><meta property="og:url" content="https://dl137584.github.io/2022/02/05/010-memory-cache-and-disk-cache/"><meta property="og:site_name" content="leejs&#039;s blog"><meta property="og:description" content="브라우저에서의 메모리&amp;#x2F;디스크 캐시메모리 캐시 vs 디스크 캐시 :: 마이구미 (정리잘되어있음) 아래는 해당 링크의 요약본이다. 브라우저 측면이 아닌 하드웨어 측면에서 보면, 관련설명 잘 되어있는 추천영상: [bRd 3D] CPU는 어떻게 작동할까? 유투브링크 디스크 캐시는 하드디스크에 접근하는 시간을 개선하기 위해 RAM에 저장하는 기법이다. 캐시 메모리는"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://dl137584.github.io/assets/images/010-01.png"><meta property="article:published_time" content="2022-02-05T11:30:11.000Z"><meta property="article:modified_time" content="2022-02-06T02:21:46.557Z"><meta property="article:author" content="LEEJS"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/assets/images/010-01.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dl137584.github.io/2022/02/05/010-memory-cache-and-disk-cache/"},"headline":"[Android] 메모리 캐시와 디스크 캐시","image":["https://dl137584.github.io/assets/images/010-01.png"],"datePublished":"2022-02-05T11:30:11.000Z","dateModified":"2022-02-06T02:21:46.557Z","author":{"@type":"Person","name":"LEEJS"},"publisher":{"@type":"Organization","name":"leejs's blog","logo":{"@type":"ImageObject","url":"https://dl137584.github.io/img/logo.svg"}},"description":"브라우저에서의 메모리&#x2F;디스크 캐시메모리 캐시 vs 디스크 캐시 :: 마이구미 (정리잘되어있음) 아래는 해당 링크의 요약본이다. 브라우저 측면이 아닌 하드웨어 측면에서 보면, 관련설명 잘 되어있는 추천영상: [bRd 3D] CPU는 어떻게 작동할까? 유투브링크 디스크 캐시는 하드디스크에 접근하는 시간을 개선하기 위해 RAM에 저장하는 기법이다. 캐시 메모리는"}</script><link rel="canonical" href="https://dl137584.github.io/2022/02/05/010-memory-cache-and-disk-cache/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-Z2WE5QEQRR" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-Z2WE5QEQRR');</script><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><script data-ad-client="ca-pub-8868044834754772" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><!-- hexo injector head_end start -->
+        <script>
+            function switchTab(element) {
+                const id = element.parentElement.id;
+                const tabElements = element.parentElement.parentElement.children;
+                const contentElements = element.parentElement.parentElement.parentElement.parentElement.children[1].children;
+                for (let i = 0; i < tabElements.length; i++) {
+                    const $tab = tabElements[i];
+                    const $content = contentElements[i];
+                    if ($tab.id === id) {
+                        $tab.classList.add('is-active');
+                    } else {
+                        $tab.classList.remove('is-active');
+                    }
+                    if ($content.id === id) {
+                        $content.classList.remove('is-hidden');
+                    } else {
+                        $content.classList.add('is-hidden');
+                    }
+                }
+            }
+        </script>
+        <!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/rss2.xml" title="leejs's blog" type="application/rss+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="leejs&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">Home</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="카탈로그" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-05T11:30:11.000Z" title="2022. 2. 5. 오후 8:30:11">2022-02-05</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-06T02:21:46.557Z" title="2022. 2. 6. 오전 11:21:46">2022-02-06</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Android/">Android</a></span></div></div><h1 class="title is-3 is-size-4-mobile">[Android] 메모리 캐시와 디스크 캐시</h1><div class="content"><h1 id="브라우저에서의-메모리-디스크-캐시"><a href="#브라우저에서의-메모리-디스크-캐시" class="headerlink" title="브라우저에서의 메모리/디스크 캐시"></a><strong>브라우저에서의 메모리/디스크 캐시</strong></h1><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://mygumi.tistory.com/275">메모리 캐시 vs 디스크 캐시 :: 마이구미</a> (정리잘되어있음)</p>
+<p>아래는 해당 링크의 요약본이다.</p>
+<h2 id="브라우저-측면이-아닌-하드웨어-측면에서-보면"><a href="#브라우저-측면이-아닌-하드웨어-측면에서-보면" class="headerlink" title="브라우저 측면이 아닌 하드웨어 측면에서 보면,"></a>브라우저 측면이 아닌 하드웨어 측면에서 보면,</h2><ul>
+<li>관련설명 잘 되어있는 추천영상: [bRd 3D] CPU는 어떻게 작동할까? <a target="_blank" rel="external nofollow noopener noreferrer" href="https://youtu.be/Fg00LN30Ezg">유투브링크</a></li>
+<li>디스크 캐시는 하드디스크에 접근하는 시간을 개선하기 위해 RAM에 저장하는 기법이다.</li>
+<li>캐시 메모리는 램에 접근하지 않고 더 빠른 시간으로 접근할 수 있는 CPU 칩 안에 있는 작지만 빠른 메모리이다.(L1, L2, L3)</li>
+</ul>
+<p><img src="/assets/images/010-01.png"></p>
+<h2 id="브라우저-측면에서-보면"><a href="#브라우저-측면에서-보면" class="headerlink" title="브라우저 측면에서 보면,"></a>브라우저 측면에서 보면,</h2><p>기본적으로 캐시 데이터는 하드디스크에 저장되는데(즉, 디스크 캐시), 재사용 및 I/O 최소화 등의 이점이 있으나 더 빠른 처리를 위해 I/O 없이 웹코어 내부로 바로 접근하여 데이터를 가져오는 메모리 캐시가 존재한다.</p>
+<h1 id="앱-비트맵-캐싱"><a href="#앱-비트맵-캐싱" class="headerlink" title="앱, 비트맵 캐싱"></a><strong>앱, 비트맵 캐싱</strong></h1><ul>
+<li>참고 문서<ul>
+<li>안드로이드 공식 문서 - 비트맵 캐싱</li>
+</ul>
+  <a target="_blank" rel="external nofollow noopener noreferrer" href="https://developer.android.com/topic/performance/graphics/cache-bitmap?hl=ko"></a><ul>
+<li>찰스의 안드로이드 - LruCache 에 대하여</li>
+</ul>
+  <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.charlezz.com/?p=44551">안드로이드에서 LruCache를 파헤치기</a></li>
+</ul>
+<blockquote>
+<p>비트맵 캐싱은 LruCache를 사용하는 대표적인 예다.</p>
+</blockquote>
+<p>디스크 캐시 및 메모리 캐시에 대해 구분하고자 한 계기는 Glide다. Glide에서는 비트맵 풀 설정을 재정의할 때 다음과 같이 사용한다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> bitmapPoolSizeBytes = <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">30</span>; <span class="comment">// 30mb</span></span><br><span class="line">builder.setBitmapPool(<span class="keyword">new</span> LruBitmapPool(bitmapPoolSizeBytes));</span><br></pre></td></tr></table></figure>
+
+<p>(참고로 기존에 사용하던 UIL의 설정 중 하나는 <code>.memoryCache(new LruMemoryCache(2 * 1024 * 1024))</code>였다.)</p>
+<p>또한, 메모리 캐시를 사용하지 않거나 디스크 캐시를 어떻게 사용할지 Strategy(전략)을 설정할 수 있도록 하였다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.skipMemoryCache(<span class="keyword">true</span>) <span class="comment">// default is false</span></span><br><span class="line">.diskCacheStrategy(DiskCacheStrategy.NONE) <span class="comment">// default is AUTO</span></span><br></pre></td></tr></table></figure>
+
+<p>그렇다면 왜 이 둘은 나뉘어져 있고, 왜 Lru를 사용할까.</p>
+<h2 id="비트맵-캐싱-측면에서-보는-메모리-캐시와-디스크-캐시"><a href="#비트맵-캐싱-측면에서-보는-메모리-캐시와-디스크-캐시" class="headerlink" title="비트맵 캐싱 측면에서 보는 메모리 캐시와 디스크 캐시"></a>비트맵 캐싱 측면에서 보는 메모리 캐시와 디스크 캐시</h2><blockquote>
+<p>메모리 캐시는 “중요한 애플리케이션 메모리”를 사용하는 대신 비트맵에 빠르게 액세스할 수 있다. (인용 출처: 공식문서)</p>
+</blockquote>
+<blockquote>
+<p>주석 &gt; <a target="_blank" rel="external nofollow noopener noreferrer" href="https://stackoverflow.com/questions/9916829/how-do-i-view-android-application-specific-cache">링크</a> “중요한 애플리케이션 메모리”는 View &gt; Tool Windows &gt; Device File Explorer 로 들어가서 data/data 하위 폴더에서 확인할 수 있다.</p>
+</blockquote>
+<p>하지만 애플리케이션이 종료되면 메모리 캐시는 사라지기 때문에, 일부 데이터는 “유지”될 필요가 있다.</p>
+<blockquote>
+<p>이러한 경우 디스크 캐시를 사용하여 처리된 비트맵을 “유지”하고 메모리 캐시에서 이미지가 더 이상 사용 가능하지 않을 때 로드 시간을 줄일 수 있습니다.</p>
+</blockquote>
+<h1 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h1><p>즉, 메모리 캐시는 빠르다. 앱 자체에서 가장 빠르게 도달할 수 있는 메모리에 저장되기 때문이다. 하지만 그 용량이 작아 이미지 로딩이 많은 경우 문제가 될 수 있으므로 디스크 캐시를 함께 사용하게된다.</p>
+<p>디스크 캐시는 메모리 캐시에 비해서는 느리다. 따라서 여기에서 이미지를 불러올 경우 백그라운드에서 로딩이 되도록 비동기 처리를 함께 해줘야하는 대신 용량이 크다.</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>[Android] 메모리 캐시와 디스크 캐시</p><p><a href="https://dl137584.github.io/2022/02/05/010-memory-cache-and-disk-cache/">https://dl137584.github.io/2022/02/05/010-memory-cache-and-disk-cache/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>LEEJS</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-02-05</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-02-06</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="external nofollow noopener noreferrer" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="external nofollow noopener noreferrer" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="external nofollow noopener noreferrer" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/02/05/012-greedy-algorithm/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">탐욕법(Greedy Algorithm)</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/02/05/011-convert-remote-url-to-jpg-file/"><span class="level-item">[Android / Glide] 이미지 URL을 읽어 JPG 포맷파일로 변환하기</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">댓글</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://dl137584.github.io/2022/02/05/010-memory-cache-and-disk-cache/';
+            this.page.identifier = '2022/02/05/010-memory-cache-and-disk-cache/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'https-dl137584-github-io' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">카탈로그</h3><ul class="menu-list"><li><a class="level is-mobile" href="#브라우저에서의-메모리-디스크-캐시"><span class="level-left"><span class="level-item">브라우저에서의 메모리/디스크 캐시</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#브라우저-측면이-아닌-하드웨어-측면에서-보면"><span class="level-left"><span class="level-item">브라우저 측면이 아닌 하드웨어 측면에서 보면,</span></span></a></li><li><a class="level is-mobile" href="#브라우저-측면에서-보면"><span class="level-left"><span class="level-item">브라우저 측면에서 보면,</span></span></a></li></ul></li><li><a class="level is-mobile" href="#앱-비트맵-캐싱"><span class="level-left"><span class="level-item">앱, 비트맵 캐싱</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#비트맵-캐싱-측면에서-보는-메모리-캐시와-디스크-캐시"><span class="level-left"><span class="level-item">비트맵 캐싱 측면에서 보는 메모리 캐시와 디스크 캐시</span></span></a></li></ul></li><li><a class="level is-mobile" href="#결론"><span class="level-left"><span class="level-item">결론</span></span></a></li></ul></div></div><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="LEEJS"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">LEEJS</p><p class="is-size-6 is-block">Android Dev.</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>South Korea</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">12</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="external nofollow noopener noreferrer" title="Github" href="https://github.com/dl137584"><i class="fab fa-github"></i></a></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Android/"><span class="level-start"><span class="level-item">Android</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/Etc/"><span class="level-start"><span class="level-item">Etc</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Translation/"><span class="level-start"><span class="level-item">Translation</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="adsense"><div class="card-content"><div class="menu"><h3 class="menu-label">광고</h3><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8868044834754772" data-ad-slot="4130112855" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="leejs&#039;s blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 LEEJS</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "이 웹 사이트는 귀하의 경험을 향상시키기 위해 Cookie를 사용합니다.",
+          dismiss: "무시",
+          allow: "허용",
+          deny: "거부",
+          link: "더 알아보기",
+          policy: "Cookie 정책",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>

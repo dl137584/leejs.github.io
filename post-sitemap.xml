@@ -9,8 +9,48 @@
 
 
     <url>
+        <loc>https://dl137584.github.io/2022/02/05/012-greedy-algorithm/</loc>
+        <lastmod>2022-02-06T02:21:46.845Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://dl137584.github.io/2022/02/05/011-convert-remote-url-to-jpg-file/</loc>
+        <lastmod>2022-02-06T02:21:46.660Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://dl137584.github.io/2022/02/05/010-memory-cache-and-disk-cache/</loc>
+        <lastmod>2022-02-06T02:21:46.557Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://dl137584.github.io/2022/01/31/hello-world/</loc>
+        <lastmod>2022-02-06T02:05:00.774Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://dl137584.github.io/2022/02/04/005-the-difference-between-concurrency-and-parallelism-in-rust/</loc>
+        <lastmod>2022-02-06T02:04:51.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://dl137584.github.io/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/</loc>
-        <lastmod>2022-02-05T11:10:03.282Z</lastmod>
+        <lastmod>2022-02-06T01:12:03.031Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -59,22 +99,6 @@
     <url>
         <loc>https://dl137584.github.io/2022/02/01/004-the-way-bitmap-gc-in-glide/</loc>
         <lastmod>2022-02-04T12:57:16.961Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://dl137584.github.io/2022/02/04/005-the-difference-between-concurrency-and-parallelism-in-rust/</loc>
-        <lastmod>2022-02-04T12:55:54.446Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://dl137584.github.io/2022/01/31/hello-world/</loc>
-        <lastmod>2022-02-01T07:31:18.995Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
