@@ -10,7 +10,15 @@
 
     <url>
         <loc>https://dl137584.github.io/2022/02/09/013-type-application-overlay/</loc>
-        <lastmod>2022-02-09T12:22:45.244Z</lastmod>
+        <lastmod>2022-02-10T10:41:43.296Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://dl137584.github.io/2022/02/10/014-parcelable-in-java-and-kotlin/</loc>
+        <lastmod>2022-02-10T10:39:01.135Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
