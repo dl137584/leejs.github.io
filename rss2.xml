@@ -9,11 +9,11 @@
     <atom:link href="https://dl137584.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 11 Feb 2022 12:58:55 GMT</pubDate>
+    <pubDate>Fri, 11 Feb 2022 13:01:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>[Android] ViewPager.addOnPageChangeListener 해석</title>
+      <title>[Android] ViewPager.addOnPageChangeListener가 가진 override function에 관하여</title>
       <link>https://dl137584.github.io/2022/02/11/015-viewpager-addonpagechangelistener/</link>
       <guid>https://dl137584.github.io/2022/02/11/015-viewpager-addonpagechangelistener/</guid>
       <pubDate>Fri, 11 Feb 2022 12:57:55 GMT</pubDate>
