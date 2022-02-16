@@ -256,7 +256,7 @@
 <p><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8868044834754772" data-ad-slot="1292114373"></ins></p>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T12:29:58.000Z" title="2022. 2. 4. 오후 9:29:58">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-16T13:54:21.424Z" title="2022. 2. 16. 오후 10:54:21">2022-02-16</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Translation/">Translation</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/005-the-difference-between-concurrency-and-parallelism-in-rust/">[번역: Async Basics with Rust] 동시성 VS 병렬성(Concurrent vs Parallel)</a></h1><div class="content"><blockquote>
+</script></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T12:29:58.000Z" title="2022. 2. 4. 오후 9:29:58">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-16T14:01:45.725Z" title="2022. 2. 16. 오후 11:01:45">2022-02-16</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Translation/">Translation</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/005-the-difference-between-concurrency-and-parallelism-in-rust/">[번역: Async Basics with Rust] 동시성 VS 병렬성(Concurrent vs Parallel)</a></h1><div class="content"><blockquote>
 <p>이 포스팅은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://cfsamson.github.io/book-exploring-async-basics/introduction.html">Async Basics with Rust</a>의 글을 번역한 것입니다. 오역, 의역, 생략이 있으니 감안하여 읽어주십시오.</p>
 </blockquote>
 <h3 id="동시성과-병렬성의-차이는-무엇인가"><a href="#동시성과-병렬성의-차이는-무엇인가" class="headerlink" title="동시성과 병렬성의 차이는 무엇인가?"></a><strong>동시성과 병렬성의 차이는 무엇인가?</strong></h3><p>이 주제에 대해 곧바로 동시성이 무엇인지 정의함으로써 파헤쳐보자. 병렬 상의 동시성과 쉽게 헷갈릴 수 있어서 시작부터 두 가지를 명확히 구분해둘 것이다.</p>
@@ -267,14 +267,6 @@
 <p><img src="/assets/images/005-01.png" alt="그림1 - Concurrent"></p>
 <p>또 다른 방법은 병렬적으로 실제 같은 시간에 여러 작업을 진행하는 것이다.</p>
 <p><img src="/assets/images/005-02.png" alt="그림2 - Parallel"></p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8868044834754772" crossorigin="anonymous"></script>
-<p><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8868044834754772" data-ad-slot="1292114373"></ins></p>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-
-
 <h3 id="몇-가지를-정의해보자"><a href="#몇-가지를-정의해보자" class="headerlink" title="몇 가지를 정의해보자."></a><strong>몇 가지를 정의해보자.</strong></h3><ul>
 <li><p>리소스(Resource)</p>
 <p>  작업을 진행하는 데에 필요한 것. 리소스는 제한되어있다.</p>
@@ -332,6 +324,11 @@
 <p><strong>다른 맥락 없이 동시성을 말할 때, 당신은 프로그래머이며 당신의 코드는 참조 프레임이 된다. 만약 이를 염두에 두지 않고 동시성에 대해 이해하려한다면 혼란스러울 수 있다.</strong></p>
 <p>즉, 참조 프레임을 염두에 둬야 한다.</p>
 <p>아직 복잡하게 들릴 수 있다. 이후 비동기 코드와 함께 작업하면서 이를 계속 상기해낸다면 복잡함은 점점 덜게 될 것이라 약속한다.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8868044834754772" crossorigin="anonymous"></script>
+<p><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8868044834754772" data-ad-slot="1292114373"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-01T08:26:47.000Z" title="2022. 2. 1. 오후 5:26:47">2022-02-01</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-16T09:47:18.360Z" title="2022. 2. 16. 오후 6:47:18">2022-02-16</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Android/">Android</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/01/004-the-way-bitmap-gc-in-glide/">[Android] Glide에서 비트맵 이미지가 GC되는 과정</a></h1><div class="content"><h1 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h1><p>위의 공식 문서에서 나와있는 바와 같이 기본적으로 Glide로 비트맵을 관리하는 걸 추천하고 있다.</p>
 <p><img src="/assets/images/004-01.png"></p>
 <p>이를 관리해줘야 하는 이유는 다음과 같다.</p>
