@@ -81,7 +81,7 @@
 <p><img src="/assets/images/007-13.png" alt="1"></p>
 <p><img src="/assets/images/007-14.png" alt="2"></p>
 <p><img src="/assets/images/007-15.png" alt="3"></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-16T14:59:26.427Z" title="2022. 2. 16. 오후 11:59:26">2022-02-16</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-16T15:07:14.679Z" title="2022. 2. 17. 오전 12:07:14">2022-02-17</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
 <li>참고: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.cv-learn.com/20201124-Notion-blog-to-Github-blog/">링크</a></li>
 </ul>
 <h2 id="1-노션의-단점"><a href="#1-노션의-단점" class="headerlink" title="(1) 노션의 단점"></a><strong>(1) 노션의 단점</strong></h2><ul>
@@ -191,10 +191,10 @@
 </ul>
 <h2 id="5-명령어"><a href="#5-명령어" class="headerlink" title="(5) 명령어"></a><strong>(5) 명령어</strong></h2><ul>
 <li>서버 실행: <code>hexo s</code> (server)</li>
-<li>정적파일 생성: <code>hexo g</code> (generate)</li>
+<li>정적파일 생성: <code>hexo g</code> (generate, <code>public/</code>이 생성된다.) </li>
 <li>배포: <code>hexo d</code> (deploy)</li>
 <li>생성 및 배포: <code>hexo d -g</code> (hexo deploy -generate)</li>
-<li>클린: <code>hexo clean</code></li>
+<li>클린: <code>hexo clean</code> (<code>public/</code>이 삭제된다.)</li>
 </ul>
 <h1 id="3-커스텀"><a href="#3-커스텀" class="headerlink" title="3. 커스텀"></a><strong>3. 커스텀</strong></h1><h2 id="1-사이드바"><a href="#1-사이드바" class="headerlink" title="(1) 사이드바"></a><strong>(1) 사이드바</strong></h2><p>_config.icarus.yml 편집</p>
 <h1 id="4-포스팅-이카루스-테마-icarus-theme-사용"><a href="#4-포스팅-이카루스-테마-icarus-theme-사용" class="headerlink" title="4. 포스팅 - 이카루스 테마(icarus theme) 사용"></a><strong>4. 포스팅 - 이카루스 테마(icarus theme) 사용</strong></h1><ul>
@@ -207,14 +207,18 @@
 <p>주의 &gt; 파일명은 대소구분을 한다. “png”와 “PNG”는 다르다.</p>
 </blockquote>
 <blockquote>
-<p>주의!! &gt; 아래 방법으로 하게되면 <code>hexo clean</code> 명령어 사용 시 <code>public/</code>아래의 파일이 날아갈 수 있으므로 혹시 모르니 백업해둘 것. </p>
+<p>주의!! &gt; 아래 방법으로 하게되면 <code>hexo clean</code> 명령어 사용 시 <code>public/</code>아래의 파일은 날아가므로 여기에 파일을 넣지 않도록 할 것.</p>
 </blockquote>
-<p><code>public/</code>에 <code>assets/images</code> 폴더를 만들어 그 아래에 이미지 파일을 넣는다.</p>
-<p>이렇게 되면 <code>![](/assets/images/image01.png)</code>와 같이 접근할 수 있다.</p>
+<ol>
+<li><p><code>_config.yml</code>에서 post_asset_folder 속성을 true로 바꾼다.</p>
+</li>
+<li><p>포스트 생성 시(<code>hexo new post</code>) 포스트의 제목과 같은 폴더가 자동으로 생성될텐데 여기에 이미지 파일을 넣는다.</p>
+</li>
+<li><p>이렇게 되면 <code>![](/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/006-02.png)</code>와 같이 접근할 수 있다.<br> 내 경우 <code>_config.yml</code>에서 permalink를 “:year/:month/:day/:title/“로 해두어 저렇게 나온다.</p>
+</li>
+</ol>
 <blockquote>
-<p>주의 &gt; <code>_config.yml</code>에서 post_asset_folder 속성을 true로 하고 생성되는 폴더에 이미지 파일을 넣는 방식은 <code>![](./image01.png)</code>처럼 상대경로를 사용할 수 있다.</p>
-<p>그런데 테스트하다보니 포스팅을 클릭하여 나타난 페이지에서는 정상적으로 이미지가 노출되었으나 사이드메뉴의 카테고리 중 하나를 클릭했을 때 페이지에서 상대경로가 맞지 않아 이미지가 깨지는 현상이 발견되었다.</p>
-<p>따라서 icarus 테마를 사용하면 절대경로를 사용해야할 것으로 보인다.</p>
+<p>주의 &gt; <code>![](./image01.png)</code>처럼 상대경로를 사용하게되면 포스팅을 클릭하여 나타난 페이지에서는 정상적으로 이미지가 노출되나 사이드메뉴의 카테고리 중 하나를 클릭했을 때 페이지에서 상대경로가 맞지 않아 이미지가 깨지게 된다.</p>
 </blockquote>
 <h2 id="3-새-페이지-생성"><a href="#3-새-페이지-생성" class="headerlink" title="(3) 새 페이지 생성"></a><strong>(3) 새 페이지 생성</strong></h2><p>페이지는 생성할 경우 해당 페이지명으로 된 폴더와 하위에 index.html 파일이 생성되며 포스트와 다르게 상단 탭에 연결할 수 있는 것으로 보임. 따라서 category와 tag는 사용할 수 없고 about처럼 상단에 추가할 수 있다.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;page&quot;</span><br></pre></td></tr></table></figure>
