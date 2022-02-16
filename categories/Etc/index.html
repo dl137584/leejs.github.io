@@ -81,7 +81,7 @@
 <p><img src="/assets/images/007-13.png" alt="1"></p>
 <p><img src="/assets/images/007-14.png" alt="2"></p>
 <p><img src="/assets/images/007-15.png" alt="3"></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-16T14:08:36.932Z" title="2022. 2. 16. 오후 11:08:36">2022-02-16</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-16T14:37:35.967Z" title="2022. 2. 16. 오후 11:37:35">2022-02-16</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
 <li>참고: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.cv-learn.com/20201124-Notion-blog-to-Github-blog/">링크</a></li>
 </ul>
 <h2 id="1-노션의-단점"><a href="#1-노션의-단점" class="headerlink" title="(1) 노션의 단점"></a><strong>(1) 노션의 단점</strong></h2><ul>
@@ -194,7 +194,7 @@
 <li>정적파일 생성: <code>hexo g</code> (generate)</li>
 <li>배포: <code>hexo d</code> (deploy)</li>
 <li>생성 및 배포: <code>hexo d -g</code> (hexo deploy -generate)</li>
-<li>클린: <code>hexo c</code> (clean)</li>
+<li>클린: <code>hexo clean</code></li>
 </ul>
 <h1 id="3-커스텀"><a href="#3-커스텀" class="headerlink" title="3. 커스텀"></a><strong>3. 커스텀</strong></h1><h2 id="1-사이드바"><a href="#1-사이드바" class="headerlink" title="(1) 사이드바"></a><strong>(1) 사이드바</strong></h2><p>_config.icarus.yml 편집</p>
 <h1 id="4-포스팅-이카루스-테마-icarus-theme-사용"><a href="#4-포스팅-이카루스-테마-icarus-theme-사용" class="headerlink" title="4. 포스팅 - 이카루스 테마(icarus theme) 사용"></a><strong>4. 포스팅 - 이카루스 테마(icarus theme) 사용</strong></h1><ul>
@@ -205,6 +205,9 @@
 
 <h2 id="2-이미지-폴더-생성"><a href="#2-이미지-폴더-생성" class="headerlink" title="(2) 이미지 폴더 생성"></a><strong>(2) 이미지 폴더 생성</strong></h2><blockquote>
 <p>주의 &gt; 파일명은 대소구분을 한다. “png”와 “PNG”는 다르다.</p>
+</blockquote>
+<blockquote>
+<p>주의!! &gt; 아래 방법으로 하게되면 <code>hexo clean</code> 명령어 사용 시 <code>public/</code>아래의 파일이 날아갈 수 있으므로 혹시 모르니 백업해둘 것. </p>
 </blockquote>
 <p><code>public/</code>에 <code>assets/images</code> 폴더를 만들어 그 아래에 이미지 파일을 넣는다.</p>
 <p>이렇게 되면 <code>![](/assets/images/image01.png)</code>와 같이 접근할 수 있다.</p>
