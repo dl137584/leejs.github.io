@@ -180,7 +180,7 @@
 <p>GlideApp을 통해 이미지를 로드해야지만이 CustomGlideModule에서 정의한 설정을 따른다.</p>
 <p>기본적으로 Glide와 사용에 지장이 있을 정도로 방식이 다르지 않다.</p>
 <p>단, GlideApp은 Glide와는 다르게 일부 RequestOptions를 통해서만 호출할 수 있었던 속성들을 다이렉트로 컨트롤할 수 있게 된다. 이는 공식문서에서 일부 예제들을 통해 비교할 수 있다.</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-05T03:52:02.000Z" title="2022. 2. 5. 오후 12:52:02">2022-02-05</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-16T09:45:24.547Z" title="2022. 2. 16. 오후 6:45:24">2022-02-16</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Android/">Android</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/05/008-glide-v4/">[Android / Glide] Glide v4 적용</a></h1><div class="content"><h1 id="1-시작하기"><a href="#1-시작하기" class="headerlink" title="1. 시작하기"></a>1. 시작하기</h1><ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-05T03:52:02.000Z" title="2022. 2. 5. 오후 12:52:02">2022-02-05</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-16T10:07:17.664Z" title="2022. 2. 16. 오후 7:07:17">2022-02-16</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Android/">Android</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/05/008-glide-v4/">[Android / Glide] Glide v4 적용</a></h1><div class="content"><h1 id="1-시작하기"><a href="#1-시작하기" class="headerlink" title="1. 시작하기"></a>1. 시작하기</h1><ul>
 <li><em><a target="_blank" rel="external nofollow noopener noreferrer" href="https://bumptech.github.io/glide/doc/configuration.html">Glide v4 공식 문서</a>(영어)</em></li>
 <li><em>찰스의 안드로이드 - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.charlezz.com/wordpress/wp-content/uploads/2020/10/www.charlezz.com-glide-v4-glide-v4--by-charlezz.pdf">Glide v4</a> 한글 번역</em></li>
 <li>*(주: 2016년 자료) 장범석님의 개발일지 - <a target="_blank" rel="external nofollow noopener noreferrer" href="http://dktfrmaster.blogspot.com/2016/09/glide.html">Glide 사용법*</a> (feat. 메모리/디스크 캐시 설명)</li>
@@ -253,6 +253,14 @@
   Glide’s default: RGB_565</li>
 <li>showImageOnLoading / showImageOnFail  → RequestOptions.placeholder(drawable) / RequestOptions.error(drawable)</li>
 </ul>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8868044834754772" crossorigin="anonymous"></script>
+<p><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8868044834754772" data-ad-slot="1292114373"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
 <h1 id="5-Clear"><a href="#5-Clear" class="headerlink" title="5. Clear"></a>5. Clear</h1><h2 id="1-memory-캐시-삭제"><a href="#1-memory-캐시-삭제" class="headerlink" title="(1) memory 캐시 삭제"></a>(1) memory 캐시 삭제</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 이 메소드는 메인 스레드에서 호출되어야 한다.</span></span><br><span class="line">Glide.get(context).clearMemory();</span><br></pre></td></tr></table></figure>
 
 <p>Glide의 캐시 메모리 영역과 BitmapPool을 정리한다.</p>
