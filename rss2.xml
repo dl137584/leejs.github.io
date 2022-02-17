@@ -9,8 +9,34 @@
     <atom:link href="https://dl137584.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 16 Feb 2022 15:16:53 GMT</pubDate>
+    <pubDate>Thu, 17 Feb 2022 11:04:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[Android] Android 12 변경사항 일부 요약</title>
+      <link>https://dl137584.github.io/2022/02/17/018-android12-summary/</link>
+      <guid>https://dl137584.github.io/2022/02/17/018-android12-summary/</guid>
+      <pubDate>Thu, 17 Feb 2022 11:00:01 GMT</pubDate>
+      
+        
+        
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.android.com/about/versions/12/overview#timeline&quot;&gt;2021.12월&lt;/a&gt; 출시예정&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.a</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<ul><li><a href="https://developer.android.com/about/versions/12/overview#timeline">2021.12월</a> 출시예정</li><li><a href="https://developer.android.com/about/versions/12?hl=ko">Android 12 개발자 프리뷰</a> (2021.05.18)</li><li>[바이라인 네트워크] <a href="https://byline.network/2021/05/19-150/">구글 I/O 2021 키노트 총정리</a></li><li>Google Developer Korea - <a href="https://developers-kr.googleblog.com/2021/06/android-12-beta-2-update.html">Android 12 Beta 2 업데이트를 확인하세요</a> (2021.07.01)</li></ul><p>이하는 보편적으로 크게 영향있을 것 같은 것만 추렸다. Android 12 업데이트 관련하여 따로 targetSDK를 바꾸어 대응하지 않았기 때문에 간략하게만 요약하였다.</p><h1 id="Android-Developer-동작-변경사항-모든-앱"><a href="#Android-Developer-동작-변경사항-모든-앱" class="headerlink" title="Android Developer - 동작 변경사항: 모든 앱"></a>Android Developer - <a href="https://developer.android.com/about/versions/12/behavior-changes-all">동작 변경사항: 모든 앱</a></h1><h2 id="신뢰할-수-없는-터치-이벤트가-차단됨"><a href="#신뢰할-수-없는-터치-이벤트가-차단됨" class="headerlink" title="신뢰할 수 없는 터치 이벤트가 차단됨"></a>신뢰할 수 없는 터치 이벤트가 차단됨</h2><blockquote><p>이 변경사항은 FLAG_NOT_TOUCHABLE 플래그 등을 사용하여 터치가 창을 통과할 수 있도록 하는 앱에 영향을 줍니다.</p></blockquote><p>어떤 오브젝트가 화면을 가리고 있는데 그 아래에 위치된 오브젝트를 터치하고자 할 때 이 터치를 허용할지에 관한 내용이다..</p><h1 id="동작-변경사항-Android-12를-타겟팅하는-앱에만-영향"><a href="#동작-변경사항-Android-12를-타겟팅하는-앱에만-영향" class="headerlink" title="동작 변경사항: Android 12를 타겟팅하는 앱에만 영향"></a><a href="https://developer.android.com/about/versions/12/behavior-changes-12">동작 변경사항: Android 12를 타겟팅하는 앱에만 영향</a></h1><blockquote><p>앱이 Android 12를 타겟팅하고 인텐트 필터를 사용하는 활동이나 서비스, broadcast receiver를 포함하면 이러한 앱 구성요소의 <code>android:exported</code> 속성을 명시적으로 선언해야 합니다.</p></blockquote><p>예를 들자면 아래와 같다.</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">android:name</span>=<span class="string">&quot;com.example.app.backgroundService&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">android:exported</span>=<span class="string">&quot;false&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">&quot;com.example.app.START_BACKGROUND&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">service</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://dl137584.github.io/categories/Android/">Android</category>
+      
+      
+      
+      <comments>https://dl137584.github.io/2022/02/17/018-android12-summary/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[Android] Android 11 대응 - 2. 범위 지정 저장소 적용</title>
