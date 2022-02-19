@@ -112,7 +112,7 @@
 <p><img src="/2022/02/04/007-blog-apply-seo/007-14.png" alt="2"></p>
 <p><img src="/2022/02/04/007-blog-apply-seo/007-15.png" alt="3"></p>
 <p>요청 처리가 완료되어 삭제되면 더이상 구글 검색창에서 관련 키워드를 입력해도 검색되지 않는다.</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-19T11:45:07.604Z" title="2022. 2. 19. 오후 8:45:07">2022-02-19</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-04T13:04:27.000Z" title="2022. 2. 4. 오후 10:04:27">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-19T11:47:21.719Z" title="2022. 2. 19. 오후 8:47:21">2022-02-19</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Etc/">Etc</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/">기술 블로그 만들기 - Github-pages, Hexo</a></h1><div class="content"><h1 id="1-노션을-사용하는-것에-대한-불편함"><a href="#1-노션을-사용하는-것에-대한-불편함" class="headerlink" title="1. 노션을 사용하는 것에 대한 불편함"></a><strong>1. 노션을 사용하는 것에 대한 불편함</strong></h1><ul>
 <li>참고: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.cv-learn.com/20201124-Notion-blog-to-Github-blog/">링크</a></li>
 </ul>
 <h2 id="1-노션의-단점"><a href="#1-노션의-단점" class="headerlink" title="(1) 노션의 단점"></a><strong>(1) 노션의 단점</strong></h2><ul>
@@ -227,6 +227,11 @@
 <li>생성 및 배포: <code>hexo d -g</code> (hexo deploy -generate)</li>
 <li>클린: <code>hexo clean</code> (<code>public/</code>이 삭제된다.)</li>
 </ul>
+<p>커맨드라인에서 hexo clean을 하게되면 마지막 INFO에 아래와 같이 뜨는 것을 볼 수 있다. 즉, DB와 public 폴더가 초기화된다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INFO  === Registering Hexo extensions ===</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br></pre></td></tr></table></figure>
+
+
+
 <h1 id="3-커스텀"><a href="#3-커스텀" class="headerlink" title="3. 커스텀"></a><strong>3. 커스텀</strong></h1><h2 id="1-사이드바"><a href="#1-사이드바" class="headerlink" title="(1) 사이드바"></a><strong>(1) 사이드바</strong></h2><p>_config.icarus.yml 편집</p>
 <h1 id="4-포스팅-이카루스-테마-icarus-theme-사용"><a href="#4-포스팅-이카루스-테마-icarus-theme-사용" class="headerlink" title="4. 포스팅 - 이카루스 테마(icarus theme) 사용"></a><strong>4. 포스팅 - 이카루스 테마(icarus theme) 사용</strong></h1><ul>
 <li>밍피디 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://mingpd.github.io/2019/04/14/github-blog-with-hexo-2/">링크</a></li>
@@ -324,7 +329,7 @@
 
 
 
-<h1 id="5-마크다운-활용"><a href="#5-마크다운-활용" class="headerlink" title="5. 마크다운 활용"></a><strong>5. 마크다운 활용</strong></h1><h2 id="노션의-callout-설명-구현"><a href="#노션의-callout-설명-구현" class="headerlink" title="노션의 callout(설명) 구현"></a>노션의 callout(설명) 구현</h2><p>인용과 차이를 두면서 노션의 callout UI와 같이 일부영역 강조를 편하게 사용하고 싶어서 마크다운의 테이블 구조를 활용하여 아래와 같이 만들었다. 인용 외에 참고사항 등에 사용할 예정이다.</p>
+<h1 id="5-마크다운-활용"><a href="#5-마크다운-활용" class="headerlink" title="5. 마크다운 활용"></a><strong>5. 마크다운 활용</strong></h1><h2 id="노션의-callout-설명-구현"><a href="#노션의-callout-설명-구현" class="headerlink" title="노션의 callout(설명) 구현"></a><strong>노션의 callout(설명) 구현</strong></h2><p>인용과 차이를 두면서 노션의 callout UI와 같이 일부영역 강조를 편하게 사용하고 싶어서 마크다운의 테이블 구조를 활용하여 아래와 같이 만들었다. 인용 외에 참고사항 등에 사용할 예정이다.</p>
 <table>
 <thead>
 <tr>
