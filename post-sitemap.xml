@@ -9,8 +9,16 @@
 
 
     <url>
+        <loc>https://dl137584.github.io/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/</loc>
+        <lastmod>2022-02-19T11:13:11.298Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://dl137584.github.io/2022/02/19/019-blog-apply-adsense/</loc>
-        <lastmod>2022-02-19T04:28:50.270Z</lastmod>
+        <lastmod>2022-02-19T04:30:40.580Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -99,14 +107,6 @@
     <url>
         <loc>https://dl137584.github.io/2022/02/04/005-the-difference-between-concurrency-and-parallelism-in-rust/</loc>
         <lastmod>2022-02-16T15:12:44.388Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://dl137584.github.io/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/</loc>
-        <lastmod>2022-02-16T15:12:42.941Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
