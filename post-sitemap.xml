@@ -9,8 +9,16 @@
 
 
     <url>
+        <loc>https://dl137584.github.io/2022/04/18/021-kotlin-equality-and-identity/</loc>
+        <lastmod>2022-04-18T14:28:40.210Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://dl137584.github.io/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/</loc>
-        <lastmod>2022-02-19T11:47:21.719Z</lastmod>
+        <lastmod>2022-02-19T11:48:06.195Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
