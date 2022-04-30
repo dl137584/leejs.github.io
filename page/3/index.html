@@ -64,7 +64,7 @@
 
 <p>이때, fib(5)를 구하려고 하면 fib(2)의 계산은 여러번 중복된다. 이로 인한 계산 속도의 저하를 막기 위해 fib(2)와 같이 중복되는 값은 배열에 저장하여 필요할 때 배열에 접근해서 값을 가져오는 방식이다.</p>
 <p>중복계산이 줄어들기 때문에 시간 복잡도는 O(n)가 된다.</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-05T11:30:11.000Z" title="2022. 2. 5. 오후 8:30:11">2022-02-05</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-02-16T15:13:48.821Z" title="2022. 2. 17. 오전 12:13:48">2022-02-17</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Android/">Android</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/05/010-memory-cache-and-disk-cache/">[Android] 메모리 캐시와 디스크 캐시</a></h1><div class="content"><h1 id="브라우저에서의-메모리-디스크-캐시"><a href="#브라우저에서의-메모리-디스크-캐시" class="headerlink" title="브라우저에서의 메모리/디스크 캐시"></a><strong>브라우저에서의 메모리/디스크 캐시</strong></h1><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://mygumi.tistory.com/275">메모리 캐시 vs 디스크 캐시 :: 마이구미</a> (정리잘되어있음)</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-02-05T11:30:11.000Z" title="2022. 2. 5. 오후 8:30:11">2022-02-05</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-04-30T10:30:27.960Z" title="2022. 4. 30. 오후 7:30:27">2022-04-30</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Android/">Android</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/05/010-memory-cache-and-disk-cache/">[Android] 메모리 캐시와 디스크 캐시</a></h1><div class="content"><h1 id="브라우저에서의-메모리-디스크-캐시"><a href="#브라우저에서의-메모리-디스크-캐시" class="headerlink" title="브라우저에서의 메모리/디스크 캐시"></a><strong>브라우저에서의 메모리/디스크 캐시</strong></h1><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://mygumi.tistory.com/275">메모리 캐시 vs 디스크 캐시 :: 마이구미</a> (정리잘되어있음)</p>
 <p>아래는 해당 링크의 요약본이다.</p>
 <h2 id="브라우저-측면이-아닌-하드웨어-측면에서-보면"><a href="#브라우저-측면이-아닌-하드웨어-측면에서-보면" class="headerlink" title="브라우저 측면이 아닌 하드웨어 측면에서 보면,"></a>브라우저 측면이 아닌 하드웨어 측면에서 보면,</h2><ul>
 <li>관련설명 잘 되어있는 추천영상: [bRd 3D] CPU는 어떻게 작동할까? <a target="_blank" rel="external nofollow noopener noreferrer" href="https://youtu.be/Fg00LN30Ezg">유투브링크</a></li>
@@ -83,12 +83,10 @@
 
 <h1 id="앱-비트맵-캐싱"><a href="#앱-비트맵-캐싱" class="headerlink" title="앱, 비트맵 캐싱"></a><strong>앱, 비트맵 캐싱</strong></h1><ul>
 <li>참고 문서<ul>
-<li>안드로이드 공식 문서 - 비트맵 캐싱</li>
+<li>안드로이드 공식 문서 - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://developer.android.com/topic/performance/graphics/cache-bitmap?hl=ko">비트맵 캐싱</a></li>
+<li>찰스의 안드로이드 - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.charlezz.com/?p=44551">안드로이드에서 LruCache를 파헤치기</a></li>
 </ul>
-  <a target="_blank" rel="external nofollow noopener noreferrer" href="https://developer.android.com/topic/performance/graphics/cache-bitmap?hl=ko"></a><ul>
-<li>찰스의 안드로이드 - LruCache 에 대하여</li>
-</ul>
-  <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.charlezz.com/?p=44551">안드로이드에서 LruCache를 파헤치기</a></li>
+</li>
 </ul>
 <blockquote>
 <p>비트맵 캐싱은 LruCache를 사용하는 대표적인 예다.</p>
