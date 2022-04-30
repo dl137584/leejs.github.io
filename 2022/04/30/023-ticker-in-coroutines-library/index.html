@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8868044834754772" crossorigin="anonymous"></script><title>[Kotlin] Ticker(티커) 모드 차이(TickerMode.FIXED_PERIOD, FIXED_DELAY) - leejs&#039;s blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="leejs&#039;s blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="leejs&#039;s blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="개발 환경: Kotlin 1.6  coroutines 라이브러리에는 **티커(ticker)**라고 하는 특별한 랑데부 채널이 있다. 이 채널은 Unit 값을 계속 발생시키되 한 원소와 다음 원소의 발생 시점이 주어진 지연 시간만큼 떨어져 있는 스트림을 만든다. 여기서 랑데부 채널이란 내부 버퍼가 없어 이 채널에서의 send() 호출은 다른 어떤 코루틴이"><meta property="og:type" content="blog"><meta property="og:title" content="[Kotlin] Ticker(티커) 모드 차이(TickerMode.FIXED_PERIOD, FIXED_DELAY)"><meta property="og:url" content="https://dl137584.github.io/2022/04/30/023-ticker-in-coroutines-library/"><meta property="og:site_name" content="leejs&#039;s blog"><meta property="og:description" content="개발 환경: Kotlin 1.6  coroutines 라이브러리에는 **티커(ticker)**라고 하는 특별한 랑데부 채널이 있다. 이 채널은 Unit 값을 계속 발생시키되 한 원소와 다음 원소의 발생 시점이 주어진 지연 시간만큼 떨어져 있는 스트림을 만든다. 여기서 랑데부 채널이란 내부 버퍼가 없어 이 채널에서의 send() 호출은 다른 어떤 코루틴이"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://dl137584.github.io/2022/04/30/023-ticker-in-coroutines-library/023-01.PNG"><meta property="og:image" content="https://dl137584.github.io/2022/04/30/023-ticker-in-coroutines-library/023-02.PNG"><meta property="article:published_time" content="2022-04-30T08:12:06.000Z"><meta property="article:modified_time" content="2022-04-30T09:00:26.352Z"><meta property="article:author" content="LEEJS"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/2022/04/30/023-ticker-in-coroutines-library/023-01.PNG"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dl137584.github.io/2022/04/30/023-ticker-in-coroutines-library/"},"headline":"[Kotlin] Ticker(티커) 모드 차이(TickerMode.FIXED_PERIOD, FIXED_DELAY)","image":[],"datePublished":"2022-04-30T08:12:06.000Z","dateModified":"2022-04-30T09:00:26.352Z","author":{"@type":"Person","name":"LEEJS"},"publisher":{"@type":"Organization","name":"leejs's blog","logo":{"@type":"ImageObject","url":"https://dl137584.github.io/img/logo.svg"}},"description":"개발 환경: Kotlin 1.6  coroutines 라이브러리에는 **티커(ticker)**라고 하는 특별한 랑데부 채널이 있다. 이 채널은 Unit 값을 계속 발생시키되 한 원소와 다음 원소의 발생 시점이 주어진 지연 시간만큼 떨어져 있는 스트림을 만든다. 여기서 랑데부 채널이란 내부 버퍼가 없어 이 채널에서의 send() 호출은 다른 어떤 코루틴이"}</script><link rel="canonical" href="https://dl137584.github.io/2022/04/30/023-ticker-in-coroutines-library/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-Z2WE5QEQRR" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-Z2WE5QEQRR');</script><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><script data-ad-client="ca-pub-8868044834754772" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><!-- hexo injector head_end start -->
+        <script>
+            function switchTab(element) {
+                const id = element.parentElement.id;
+                const tabElements = element.parentElement.parentElement.children;
+                const contentElements = element.parentElement.parentElement.parentElement.parentElement.children[1].children;
+                for (let i = 0; i < tabElements.length; i++) {
+                    const $tab = tabElements[i];
+                    const $content = contentElements[i];
+                    if ($tab.id === id) {
+                        $tab.classList.add('is-active');
+                    } else {
+                        $tab.classList.remove('is-active');
+                    }
+                    if ($content.id === id) {
+                        $content.classList.remove('is-hidden');
+                    } else {
+                        $content.classList.add('is-hidden');
+                    }
+                }
+            }
+        </script>
+        <!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/rss2.xml" title="leejs's blog" type="application/rss+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="leejs&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">Home</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="카탈로그" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time datetime="2022-04-30T08:12:06.000Z" title="2022. 4. 30. 오후 5:12:06">2022-04-30</time>&nbsp;게시 됨</span><span class="level-item"><time datetime="2022-04-30T09:00:26.352Z" title="2022. 4. 30. 오후 6:00:26">2022-04-30</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Kotlin/">Kotlin</a></span></div></div><h1 class="title is-3 is-size-4-mobile">[Kotlin] Ticker(티커) 모드 차이(TickerMode.FIXED_PERIOD, FIXED_DELAY)</h1><div class="content"><blockquote>
+<p>개발 환경: Kotlin 1.6</p>
+</blockquote>
+<p>coroutines 라이브러리에는 **티커(ticker)**라고 하는 특별한 랑데부 채널이 있다. 이 채널은 <strong>Unit 값을 계속 발생시키되 한 원소와 다음 원소의 발생 시점이 주어진 지연 시간만큼 떨어져 있는 스트림</strong>을 만든다.</p>
+<p>여기서 <strong>랑데부 채널</strong>이란 내부 버퍼가 없어 이 채널에서의 send() 호출은 다른 어떤 코루틴이 receive()를 호출할 때까지 항상 <strong>일시 중단</strong>된다. 마찬가지로 receive() 호출은 다른 어떤 코루틴이 send()를 호출할 때까지 일시 중단되는 특성을 가진다.<br>즉, 랑데부 채널은 생산자와 소비자 코루틴이 교대로 활성화되도록 보장한다.</p>
+<p>티커 채널을 만들려면 ticker()라는 함수를 사용한다.</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> kotlinx.coroutines.*</span><br><span class="line"><span class="keyword">import</span> kotlinx.coroutines.channels.*</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> = runBlocking &#123;</span><br><span class="line">	<span class="keyword">val</span> ticker = ticker(<span class="number">100</span>) <span class="comment">// TickerMode.FIXED_PERIOD</span></span><br><span class="line">	println(withTimeoutOrNull(<span class="number">50</span>) &#123; ticker.receive() &#125;)</span><br><span class="line">	println(withTimeoutOrNull(<span class="number">60</span>) &#123; ticker.receive() &#125;)</span><br><span class="line">	delay(<span class="number">250</span>)</span><br><span class="line">	println(withTimeoutOrNull(<span class="number">1</span>) &#123; ticker.receive() &#125;)</span><br><span class="line">	println(withTimeoutOrNull(<span class="number">60</span>) &#123; ticker.receive() &#125;)</span><br><span class="line">	println(withTimeoutOrNull(<span class="number">60</span>) &#123; ticker.receive() &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">null</span><br><span class="line">kotlin.Unit</span><br><span class="line">kotlin.Unit</span><br><span class="line">kotlin.Unit</span><br><span class="line">null</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2022/04/30/023-ticker-in-coroutines-library/023-01.PNG" alt="TickerMode.FIXED_PERIOD"></p>
+<ol>
+<li><p>0ms ~ 50ms(타임아웃): 50ms(밀리초) 내에 티커 신호를 받으려고 시도하나, 티커 지연 시간이 100ms이므로 withTimeoutOtNull()은 신호를 받지 못하고 타임아웃이 걸려 널을 반환한다.</p>
+</li>
+<li><p>50ms ~ 100ms: 타임아웃이 1회 난 후 다음 60ms 안에 신호를 받으려고 시도한다. 그리고 이번에는 50 + 60ms가 100ms 보다 길기 때문에 결괏값을 얻는다. receive()가 호출되면 티커가 재개된다.</p>
+<p> 2_1. 100ms ~ 350ms: 이때 소비자 코루틴이 약 250ms 동안 일시 중단된다. 일시 중단으로부터 <strong>100ms 후에 티커는 다른 신호를 보내고 신호가 수신될 때까지 일시 중단된다.</strong> 그리고 소비자 코루틴과 티커 코루틴 모두 150ms 동안 일시 중단 상태로 남는다.</p>
+</li>
+<li><p>350ms: 소비자 코루틴이 재개되고 신호를 요청하려고 시도한다. 신호가 이미 보내졌기 때문에 receive()는 즉시 결과를 반환한다.</p>
+<p> 3_1. 이제 티커는 마지막 신호를 보내고 나서 얼마나 시간이 지났는지 검사하고(250ms), 지연 시간을 50ms로 줄인다.</p>
+</li>
+<li><p>350ms ~ 400ms: 소비자는 50ms 타임아웃 안에 신호를 받으려고 시도한다. 다음 신호가 50ms 이전에 보내졌기 때문에 이 시도는 거의 확실히 성공할 것이다.</p>
+</li>
+<li><p>400ms ~ 460ms(타임아웃): 마지막으로, 신호를 받으려는 receive() 호출이 거의 즉시 일어난다. 따라서 티커는 전체 지연 시간(100ms)를 다시 기다린다. 그 결과, 마지막 receive() 호출은 60ms 타임아웃 안에 티커로부터 신호를 받지 못하기 때문에 널을 받는다.</p>
+</li>
+</ol>
+<p>티커 모드를 FIXED_DELAY로 고정하면 결과가 다음과 같이 바뀐다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">null</span><br><span class="line">kotlin.Unit</span><br><span class="line">kotlin.Unit</span><br><span class="line">null</span><br><span class="line">kotlin.Unit</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2022/04/30/023-ticker-in-coroutines-library/023-02.PNG" alt="TickerMode.FIXED_DELAY"></p>
+<p>초반부는 앞의 예제와 비슷하게 진행된다. 하지만 250밀리초의 긴 지연 이후 소비자 코루틴이 재개될 때부터는(3_1) 동작이 달라진다.</p>
+<ol start="3">
+<li><p>350ms: 소비자 코루틴이 재개되고 신호를 요청하려고 시도한다. 신호가 이미 보내졌기 때문에 receive()는 즉시 결과를 반환한다.</p>
+<p> 3_1. receive()로 결과를 넘긴 시점에서 티커는 현재시간을 고려하지 않고 여기서부터 100ms를 다시 기다린다.</p>
+</li>
+<li><p>350ms ~ 410ms(타임아웃): 티커가 신호를 보내려면 40ms 남았으므로 널을 받는다.</p>
+</li>
+<li><p>410ms ~ 450ms: 3_1에서 티커가 재개된 시간으로부터 100ms가 지났으므로 결과를 무사히 반환받는다.</p>
+</li>
+</ol>
+<blockquote>
+<p><b>참고</b><br>알렉세이 세두노프 &lt;코틀린 완벽 가이드&gt;</p>
+</blockquote>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8868044834754772" crossorigin="anonymous"></script>
+<p><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8868044834754772" data-ad-slot="1292114373"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+</div><div class="article-licensing box"><div class="licensing-title"><p>[Kotlin] Ticker(티커) 모드 차이(TickerMode.FIXED_PERIOD, FIXED_DELAY)</p><p><a href="https://dl137584.github.io/2022/04/30/023-ticker-in-coroutines-library/">https://dl137584.github.io/2022/04/30/023-ticker-in-coroutines-library/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>LEEJS</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-04-30</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-04-30</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="external nofollow noopener noreferrer" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="external nofollow noopener noreferrer" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="external nofollow noopener noreferrer" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/04/20/022-keep-horizontal-scroll-when-scrolling-vertically-other-recyclerview/"><span class="level-item">[Android] 상하 스크롤 중 내부 RecyclerView의 좌우 스크롤 유지</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">댓글</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://dl137584.github.io/2022/04/30/023-ticker-in-coroutines-library/';
+            this.page.identifier = '2022/04/30/023-ticker-in-coroutines-library/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'https-dl137584-github-io' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="LEEJS"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">LEEJS</p><p class="is-size-6 is-block">Android Dev.</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>South Korea</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">22</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="external nofollow noopener noreferrer" title="Github" href="https://github.com/dl137584"><i class="fab fa-github"></i></a></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Android/"><span class="level-start"><span class="level-item">Android</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Etc/"><span class="level-start"><span class="level-item">Etc</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Kotlin/"><span class="level-start"><span class="level-item">Kotlin</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Translation/"><span class="level-start"><span class="level-item">Translation</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="adsense"><div class="card-content"><div class="menu"><h3 class="menu-label">광고</h3><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8868044834754772" data-ad-slot="4130112855" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="leejs&#039;s blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 LEEJS</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "이 웹 사이트는 귀하의 경험을 향상시키기 위해 Cookie를 사용합니다.",
+          dismiss: "무시",
+          allow: "허용",
+          deny: "거부",
+          link: "더 알아보기",
+          policy: "Cookie 정책",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>
