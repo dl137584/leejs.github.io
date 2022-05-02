@@ -9,6 +9,30 @@
 
 
     <url>
+        <loc>https://dl137584.github.io/2022/02/16/017-android11-scoped-storage/</loc>
+        <lastmod>2022-05-02T13:40:19.270Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://dl137584.github.io/2022/04/18/021-kotlin-equality-and-identity/</loc>
+        <lastmod>2022-05-02T13:33:04.834Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://dl137584.github.io/2022/04/30/023-ticker-in-coroutines-library/</loc>
+        <lastmod>2022-05-02T13:26:56.495Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://dl137584.github.io/2022/05/02/024-allow-the-different-scaletype-when-loading-image-in-glide/</loc>
         <lastmod>2022-05-02T13:25:34.173Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,24 +49,8 @@
     </url>
 
     <url>
-        <loc>https://dl137584.github.io/2022/04/30/023-ticker-in-coroutines-library/</loc>
-        <lastmod>2022-05-02T12:44:19.638Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://dl137584.github.io/2022/02/05/010-memory-cache-and-disk-cache/</loc>
         <lastmod>2022-04-30T10:30:27.960Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://dl137584.github.io/2022/04/18/021-kotlin-equality-and-identity/</loc>
-        <lastmod>2022-04-20T12:40:40.829Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -99,14 +107,6 @@
     <url>
         <loc>https://dl137584.github.io/2022/02/10/014-parcelable-in-java-and-kotlin/</loc>
         <lastmod>2022-02-16T15:16:58.585Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://dl137584.github.io/2022/02/16/017-android11-scoped-storage/</loc>
-        <lastmod>2022-02-16T15:16:53.282Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
