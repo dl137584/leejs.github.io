@@ -9,8 +9,56 @@
     <atom:link href="https://dl137584.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 02 May 2022 13:25:34 GMT</pubDate>
+    <pubDate>Tue, 14 Jun 2022 14:58:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>기사 스크랩</title>
+      <link>https://dl137584.github.io/2022/06/14/026-reading-any-awesome-article/</link>
+      <guid>https://dl137584.github.io/2022/06/14/026-reading-any-awesome-article/</guid>
+      <pubDate>Tue, 14 Jun 2022 14:34:05 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h3 id=&quot;2022-2023년-Kotlin-팀의-계획-주요-프로젝트-및-생산성-기능&quot;&gt;&lt;a href=&quot;#2022-2023년-Kotlin-팀의-계획-주요-프로젝트-및-생산성-기능&quot; class=&quot;headerlink&quot; title=&quot;2022~2023년 K</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h3 id="2022-2023년-Kotlin-팀의-계획-주요-프로젝트-및-생산성-기능"><a href="#2022-2023년-Kotlin-팀의-계획-주요-프로젝트-및-생산성-기능" class="headerlink" title="2022~2023년 Kotlin 팀의 계획: 주요 프로젝트 및 생산성 기능"></a><strong>2022~2023년 Kotlin 팀의 계획: 주요 프로젝트 및 생산성 기능</strong></h3><ul><li>2022.06.13</li><li><a href="https://blog.jetbrains.com/ko/kotlin/2022/06/what-to-expect-from-the-kotlin-team-in-202223/">JetBrains</a></li></ul><blockquote><p>2022~2023년 핵심 프로젝트는 다음과 같습니다.</p><ul><li>Kotlin 릴리스의 품질과 안정성 개선</li><li>K2 컴파일러의 베타 버전 출시</li><li>Kotlin Multiplatform Mobile의 안정화 버전 출시</li><li>K2 지원 플러그인을 포함한 Kotlin IntelliJ IDEA 플러그인의 알파 버전 출시</li><li>Kotlin/JS IR 백엔드의 안정화 버전 출시</li></ul></blockquote><h3 id="2022-구글-I-O-키노트-총정리-안드로이드-13-픽셀-6a-픽셀-워치-픽셀-버즈-프로-보안-검색"><a href="#2022-구글-I-O-키노트-총정리-안드로이드-13-픽셀-6a-픽셀-워치-픽셀-버즈-프로-보안-검색" class="headerlink" title="2022 구글 I/O 키노트 총정리, 안드로이드 13, 픽셀 6a, 픽셀 워치, 픽셀 버즈 프로, 보안, 검색"></a><strong>2022 구글 I/O 키노트 총정리, 안드로이드 13, 픽셀 6a, 픽셀 워치, 픽셀 버즈 프로, 보안, 검색</strong></h3><ul><li>2022.05.12</li><li><a href="https://byline.network/2022/05/12-167/">바이라인 네트워크</a></li></ul><p>구글 어시스턴트</p><blockquote><ul><li>Nest Hub Look and Talk을 통해 ‘헤이 구글’을 부르지 않고 검색을 바로 실행할 수 있다. 얼굴 인식과 음성 인식이 함께 동작한다. 6개의 머신 러닝 모델을 함께 사용한다.</li><li>새로운 언어 모델로는 PaLM을 제시한다. 5400억개 매개변수로 훈련해 언어를 ‘생각의 연결 고리(chain-of-thought prompting)으로 연결하며, 수학 질문을 하거나 농담을 주고받을 수 있다.</li></ul></blockquote><p>Privacy</p><blockquote><ul><li>2단계 인증을 편하게 할 수 있도록 한다. 미래에는 비밀번호를 전혀 사용하지 않도록 준비 중이다. 개인 정보 보호를 위해 올여름부터 가상 카드 번호를 구글이 생성해준다.</li><li>데이터를 축소하고 암호화하는 등 프로텍티트 컴퓨팅 솔루션을 제공한다.</li><li>데이터를 타 회사에서 판매하지 않는다고 한다.</li></ul></blockquote><p>Android 13</p><blockquote><ul><li>종단간 암호화와 RCS가 적용된 메시지 앱은 5억 기기에 적용됐다. 안드로이드 13에서는 업그레이드 RCS가 적용된다.</li><li>wear OS가 스마트폰과 높은 수준의 통합을 이루었던 것처럼 올해는 안드로이드 태블릿 OS가 스마트폰 안드로이드 OS와 통합된다.</li></ul></blockquote><h3 id="안드로이드-버전-점유율-statistics"><a href="#안드로이드-버전-점유율-statistics" class="headerlink" title="안드로이드 버전 점유율(statistics)"></a><strong>안드로이드 버전 점유율(statistics)</strong></h3><ul><li>2021.11.21</li><li><a href="https://9to5google.com/2021/11/22/android-2021-distribution-numbers/">android-2021-distribution-numbers</a></li></ul><p><img src="/2022/06/14/026-reading-any-awesome-article/026-01.PNG"></p>]]></content:encoded>
+      
+      
+      <category domain="https://dl137584.github.io/categories/ARTICLE/">/ARTICLE</category>
+      
+      
+      
+      <comments>https://dl137584.github.io/2022/06/14/026-reading-any-awesome-article/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>읽는다, 책</title>
+      <link>https://dl137584.github.io/2022/06/14/025-reading-a-delicious-book/</link>
+      <guid>https://dl137584.github.io/2022/06/14/025-reading-a-delicious-book/</guid>
+      <pubDate>Tue, 14 Jun 2022 14:28:09 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h3 id=&quot;실무에-바로-적용하는-안드로이드-프로그래밍&quot;&gt;&lt;a href=&quot;#실무에-바로-적용하는-안드로이드-프로그래밍&quot; class=&quot;headerlink&quot; title=&quot;실무에 바로 적용하는 안드로이드 프로그래밍&quot;&gt;&lt;/a&gt;&lt;strong&gt;실무에 바로 적용</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h3 id="실무에-바로-적용하는-안드로이드-프로그래밍"><a href="#실무에-바로-적용하는-안드로이드-프로그래밍" class="headerlink" title="실무에 바로 적용하는 안드로이드 프로그래밍"></a><strong>실무에 바로 적용하는 안드로이드 프로그래밍</strong></h3><ul><li>2022.05.03</li><li>저자: 크리스틴 마시케노, 브라이언 가드너, 빌 필립스, 크리스 스튜어트</li></ul><p>액티비티의 생명주기를 State를 기준으로 표현한 다이어그램은 기존 <a href="https://developer.android.com/guide/components/activities/activity-lifecycle?hl=ko#alc">Android Developer</a>에 있는 것보다 훨씬 보기 좋더라.</p><p><img src="/2022/06/14/025-reading-a-delicious-book/025-01.png"></p><p>전체적으로 약간 딥한 부분까지 설명이 잘 되어있었는데도 동시에 이해하기 쉽게 쓰여있었다.<br>예를 들어, onSaveInstanceState를 액티비티 레코드와 같이 설명해주거나, MVVM 뷰모델 vs Jetpack ViewModel의 차이를 설명해주는 등 상세하고 최신 내용이 잘 반영되어있다. 예제 코드가 모두 코틀린으로 되어있는 점이 그렇다.</p><p>안드로이드를 공부하는 사람이라면 기본서 다음 두 번째 책으로 적절할 것 같다. 안드로이드/자바/코틀린의 기초 문법을 설명해주지는 않아서.</p><p>외부 라이브러리를 사용한 예제는 테스팅 코드를 제외하고는 없다. 700페이지쯤 되니 이 이상 넣을 수 없었던 것으로 보임..</p><p>그리고 이북은 PDF 사진 정도는 저장할 수 있게 해줬으면 좋겠다.</p><h3 id="코틀린-완벽-가이드"><a href="#코틀린-완벽-가이드" class="headerlink" title="코틀린 완벽 가이드"></a><strong>코틀린 완벽 가이드</strong></h3><ul><li>2022.04.01</li><li>저자: 알렉세이 세두노프</li></ul><p>코틀린에 대해 하나부터 열까지 상세한 코드 예제와 함께 설명이 수록되어있어 읽는데 막힘 없이 읽을 수 있어 코틀린 입문에 좋을 것으로 보인다.</p><p>구체적으로는 아래 항목이 있다.</p><ol><li>데이터 타입 다루는 법</li><li>각종 클래스의 특징</li><li>제네릭</li><li><strong>자바와의 상호 운용성</strong> (아주 친절한 설명!)</li><li>동시성</li><li>테스팅</li></ol><p>기본을 탄탄히 하는 데는 <a href="https://kotlinlang.org/docs/home.html">Kotlin Guide</a>보다 한국어라는 점에서 책을 보는 게 더 나을 것 같다. 코틀린에 관해 원하는 것은 대부분 이 책에서 얻을 수 있으리라..</p><p>덧붙여 이 책은 Kotlin 1.6을 기준으로 쓰였으며 어느 하위 버전에서 어떤 업데이트가 있었는지도 중요한 부분은 설명이 되어있다.</p>]]></content:encoded>
+      
+      
+      <category domain="https://dl137584.github.io/categories/BOOK/">/BOOK</category>
+      
+      
+      
+      <comments>https://dl137584.github.io/2022/06/14/025-reading-a-delicious-book/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[Android / Glide] Glide 이미지 로딩 중 다른 scaleType 적용하기</title>
@@ -464,56 +512,6 @@
       
       
       <comments>https://dl137584.github.io/2022/02/04/006-create-personal-blog-with-githubpages-and-hexo/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[번역: Async Basics with Rust] 동시성 VS 병렬성(Concurrent vs Parallel)</title>
-      <link>https://dl137584.github.io/2022/02/04/005-the-difference-between-concurrency-and-parallelism-in-rust/</link>
-      <guid>https://dl137584.github.io/2022/02/04/005-the-difference-between-concurrency-and-parallelism-in-rust/</guid>
-      <pubDate>Fri, 04 Feb 2022 12:29:58 GMT</pubDate>
-      
-        
-        
-      <description>&lt;blockquote&gt;
-&lt;p&gt;이 포스팅은 &lt;a href=&quot;https://cfsamson.github.io/book-exploring-async-basics/introduction.html&quot;&gt;Async Basics with Rust&lt;/a&gt;의 글을 번역한</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<blockquote><p>이 포스팅은 <a href="https://cfsamson.github.io/book-exploring-async-basics/introduction.html">Async Basics with Rust</a>의 글을 번역한 것입니다. 오역, 의역, 생략이 있으니 감안하여 읽어주십시오.</p></blockquote><h3 id="동시성과-병렬성의-차이는-무엇인가"><a href="#동시성과-병렬성의-차이는-무엇인가" class="headerlink" title="동시성과 병렬성의 차이는 무엇인가?"></a><strong>동시성과 병렬성의 차이는 무엇인가?</strong></h3><p>이 주제에 대해 곧바로 동시성이 무엇인지 정의함으로써 파헤쳐보자. 병렬 상의 동시성과 쉽게 헷갈릴 수 있어서 시작부터 두 가지를 명확히 구분해둘 것이다.</p><p><code>동시 실행(Concurrency)이란 동시에 많은 것을 **처리하는** 걸 말한다.</code></p><p><code>병행(Parallelism)이란 동시에 많은 일을 **수행하는** 걸 말한다.</code></p><p>우리는 <code>멀티태스킹</code>을 동시에 여러 개의 작업을 진행한다는 개념으로 쓴다. 이러한 다중 작업에는 두 가지 방법이 있다.</p><p>하나는 작업을 동시에(;함께; 겸임) 진행하지만, 실제 같은 시간에 하지는 않는 것이며,</p><p><img src="/2022/02/04/005-the-difference-between-concurrency-and-parallelism-in-rust/005-01.png" alt="그림1 - Concurrent"></p><p>또 다른 방법은 병렬적으로 실제 같은 시간에 여러 작업을 진행하는 것이다.</p><p><img src="/2022/02/04/005-the-difference-between-concurrency-and-parallelism-in-rust/005-02.png" alt="그림2 - Parallel"></p><h3 id="몇-가지를-정의해보자"><a href="#몇-가지를-정의해보자" class="headerlink" title="몇 가지를 정의해보자."></a><strong>몇 가지를 정의해보자.</strong></h3><ul><li><p>리소스(Resource)</p><p>  작업을 진행하는 데에 필요한 것. 리소스는 제한되어있다.</p><p>  한 예로 CPU의 시간이나 메모리를 들 수 있다.</p></li><li><p>작업(Task)</p><p>  진행하면서 어떤 종류의 리소스를 필요로하는 기능 집합(A set of operations)이다.</p><p>  하나의 작업은 몇 개의 sub-operations로 구성된다.</p></li><li><p>병렬성(Parallel)</p><p>  <strong>정확히 같은 시간</strong>에 독립적으로 일어나는 일.</p></li><li><p>동시성(Concurrent)</p><p>  동시에 <code>진행중(in progress)</code>인 작업들을 말하지만, 반드시 같은 시간에 진행되는 것은 아니다.</p><p>  이는 중요한 차이점이다. 만약 두 작업이 동시에 실행됐지만 병렬적이지는 않을 때, 그 작업들은 stop(멈춤)하거나 resume(재시작)할 수 있어야 한다.</p></li></ul><blockquote><p>주석 &gt; 왜냐하면 병렬적이지 않은 것은 위의 [그림2 - Parallel]과 같이 한 작업이 계속해서 CPU를 붙잡고 항상 <code>진행중</code> 상태에 있지 않기 때문이다. 멈추고 재시작하기를 반복한다.</p></blockquote><p>따라서 동시 실행 속성을 가지고 있다면 interruptable(끼어들 수 있는)하다고 말한다.</p><h3 id="내가-사용하는-심상모형-mental-model"><a href="#내가-사용하는-심상모형-mental-model" class="headerlink" title="내가 사용하는 심상모형(mental model)"></a><strong>내가 사용하는 심상모형(mental model)</strong></h3><p>나는 우리가 병렬성이나 동시성을 가진 프로그램을 만들 떄 어려워하는 이유가 일상에서 일어나는 사건들을 모델링하는 방법에서 기인한다고 생각한다. 우리는 대게 잘못된 직관으로 대략적인 정의를 내리는 경향이 있기 때문이다.</p><p><code>concurrent의 사전적 정의는 parallel과의 차이를 인지하는 데에 도움을 주지 않는다.</code></p><p>나로 말할 것 같으면, 병렬성과 동시성의 차이점이 <strong>왜</strong> 필요한지를 떠올린 게 시작이었다.</p><p>이들이 필요한 <strong>이유</strong>는 리소스의 활용도와 효율성과 관련된 모든 것에 있다.</p><p><code>효율성이란 어떤 일을 하면서, 또는 바라는 결과를 내는 데에 쓰이는 자원, 에너지, 노력, 돈, 그리고 시간을 낭비하지 않는 (대게 측정할 수 있는) 능력을 말한다.</code></p><ul><li><p>병행(Parallelism)</p><p>  작업을 수행하면서 리소스를 계속해서 늘린다. 이는 효율성을 고려하지 않는다.</p></li><li><p>동시 실행(Concurrency)</p><p>  효율성과 리소스 활용도 모두를 고려한다. 동시 진행은 절대 단 하나의 작업을 더 빠르게 만들 수는 없다. 대신 리소스를 더 효율적으로 운용하고, 그럼으로써 작업들의 집합(a set of tasks)이 더 빠르게 끝나도록 한다.</p></li></ul><h3 id="경제학에서-몇-가지-유사점을-찾아보자"><a href="#경제학에서-몇-가지-유사점을-찾아보자" class="headerlink" title="경제학에서 몇 가지 유사점을 찾아보자."></a><strong>경제학에서 몇 가지 유사점을 찾아보자.</strong></h3><p>상품 제조 사업에서는 린(LEAN)이 대표적이다.</p><p>린 이라는 기술을 사용함에 있어 가장 이점은 <strong>기다리는 시간과 가치없는 작업을 제거하는 것</strong>이다.</p><p><code>프로그래밍에서 말할 것 같으면, blocking과 polling을 피한다고 말할 수 있다.</code></p><h3 id="동시성-및-I-O와의-관계"><a href="#동시성-및-I-O와의-관계" class="headerlink" title="동시성 및 I/O와의 관계"></a><strong>동시성 및 I/O와의 관계</strong></h3><p>지금까지 말한 걸 보면, 비동기 코드를 작성하는 데 리소스를 최적으로 사용할 때야 비로소 의미가 있다.</p><p>프로그램을 짤 때 동시성이 도움이 되지 않는 경우도 있다. 병렬로 작업할 파트들로 나눌 수 있다면 더 많은 리소스를 할당하는 식으로 문제를 해결할 수 있다.</p><p><strong>동시성에 관한 두 가지 주요 이용 사례가 있다:</strong></p><ol><li>입출력이 수행되는 중에 일부 외부 이벤트가 발생할 때까지 기다리는 상황.</li><li>여러 가지에 집중해야할 때 한 가지에만 너무 오래 기다리는 걸 방지해야하는 상황.</li></ol><p>첫 번째는 기본적인 입출력 예제이다: 당신이 한 가지 작업을 진행하기 전에 네트워크 호출이나 DB 쿼리 등이 발생할 때까지 기다려야하는 상황이다. 그러나 지금 다른 할 일도 많기 때문에 다른 작업을 계속하다가 작업(네트워크 호출 등)이 준비가 됐는지 정기적으로 확인하거나 준비가 됐을 떄 알림을 받아야 한다.</p><p>두 번째는 UI 단에서 자주 일어나는 일이다. 당신이 한 개의 코어만 가지고 있다고 하자. 그럼 CPU에서 집중적으로 작업을 수행하고 있는데 대체 어떤 UI가 무반응을 피할 수 있을까?</p><p>음, 당신이 지금 하고 있는 작업이 뭐든간에 <strong>멈추고</strong>, “UI 갱신”을 하고, 그 후에 하려고 했던 일을 <strong>재시작</strong>할 수도 있다. 이렇게하면 작업을 1초에 60번 중지/재시작 해야한다. 그러면 당신은 결국 대략 60Hz의 새로고침 빈도를 반응하는 UI를 가지게 될 것이다.</p><h3 id="OS에서-제공하는-스레드에-관하여"><a href="#OS에서-제공하는-스레드에-관하여" class="headerlink" title="OS에서 제공하는 스레드에 관하여"></a><strong>OS에서 제공하는 스레드에 관하여</strong></h3><p>I/O 처리 전략에 관해 이야기하면서 스레드에 대해 좀 더 다룰 거지만 여기서도 언급하겠다. OS 스레드를 사용할 때 한 가지 문제는 코어에 매핑되는 것처럼 보인다는 것이다. 대부분의 운영 체제가 스레드 수가 코어 수와 같을 때까지 하나의 스레드를 하나의 코어에 매핑하려고 시도하더라도 이게 반드시 올바른 심상 모델은 아니다.</p><p>코어보다 많은 스레드를 생성하면, OS는 스레드간에 스위치를 수행하고 각 스레드에 실행시간을 제공하는 스케줄러를 사용하여 각 스레드를 동시에 진행하도록 할 것이다. 그리고 시스템에서 프로그램은 겨우 하나만 실행되지 않는다는 걸 명심해야한다. 다른 프로그램도 여러 개의 스레드를 생성할 수 있고, 이는 CPU에 있는 코어보다 더 많은 스레드가 있음을 의미한다.</p><p>그러므로, 스레드는 병렬적으로 작업을 수행하도록 하는 수단이 된다. 이는 동시성을 달성하는 수단이기도 하다.</p><p>이건 동시성에 관한 마지막 파트로 이어진다. 이제 일종의 참조 프레임을 정의해야 한다.</p><h3 id="참조-프레임-바꾸기"><a href="#참조-프레임-바꾸기" class="headerlink" title="참조 프레임 바꾸기"></a><strong>참조 프레임 바꾸기</strong></h3><p>당신의 관점에서 봤을 때 완벽하게 동기적인 코드를 짰다고 하자. 잠시 멈춰서 운영 체제 관점에서 이게 어떻게 보일지 생각해봐라.</p><p>운영 체제는 당신의 코드를 처음부터 끝까지 실행하지 않을 수 있다. 매순간 프로세스를 멈추고 다시 시작하길 반복할 것이다. CPU는 당신이 보기에 이 작업에만 집중하고 있다고 생각하는 동안에도 멈추고 일부 입력을 처리하고 있을지도 모른다.</p><p>그러니 동기적 실행은 그저 환상이다. 하지만 프로그래머로서 당신의 관점에서, 그렇지만도 않다. 이게 요점이다:</p><p><strong>다른 맥락 없이 동시성을 말할 때, 당신은 프로그래머이며 당신의 코드는 참조 프레임이 된다. 만약 이를 염두에 두지 않고 동시성에 대해 이해하려한다면 혼란스러울 수 있다.</strong></p><p>즉, 참조 프레임을 염두에 둬야 한다.</p><p>아직 복잡하게 들릴 수 있다. 이후 비동기 코드와 함께 작업하면서 이를 계속 상기해낸다면 복잡함은 점점 덜게 될 것이라 약속한다.</p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8868044834754772"     crossorigin="anonymous"></script><p><ins class="adsbygoogle"     style="display:block; text-align:center;"     data-ad-layout="in-article"     data-ad-format="fluid"     data-ad-client="ca-pub-8868044834754772"     data-ad-slot="1292114373"></ins></p><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>]]></content:encoded>
-      
-      
-      <category domain="https://dl137584.github.io/categories/Translation/">Translation</category>
-      
-      
-      
-      <comments>https://dl137584.github.io/2022/02/04/005-the-difference-between-concurrency-and-parallelism-in-rust/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[Android] Glide에서 비트맵 이미지가 GC되는 과정</title>
-      <link>https://dl137584.github.io/2022/02/01/004-the-way-bitmap-gc-in-glide/</link>
-      <guid>https://dl137584.github.io/2022/02/01/004-the-way-bitmap-gc-in-glide/</guid>
-      <pubDate>Tue, 01 Feb 2022 08:26:47 GMT</pubDate>
-      
-        
-        
-      <description>&lt;h1 id=&quot;개요&quot;&gt;&lt;a href=&quot;#개요&quot; class=&quot;headerlink&quot; title=&quot;개요&quot;&gt;&lt;/a&gt;개요&lt;/h1&gt;&lt;p&gt;위의 공식 문서에서 나와있는 바와 같이 기본적으로 Glide로 비트맵을 관리하는 걸 추천하고 있다.&lt;/p&gt;
-&lt;p&gt;&lt;img sr</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<h1 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h1><p>위의 공식 문서에서 나와있는 바와 같이 기본적으로 Glide로 비트맵을 관리하는 걸 추천하고 있다.</p><p><img src="/2022/02/01/004-the-way-bitmap-gc-in-glide/004-01.png"></p><p>이를 관리해줘야 하는 이유는 다음과 같다.</p><blockquote><p>앱에서 대량의 비트맵 데이터를 표시하면 OutOfMemoryError 오류가 발생할 수 있습니다.</p></blockquote><p>OutOfMemory 오류를 방지하기 위하여 안드로이드에서는 <a href="https://developer.android.com/reference/android/graphics/Bitmap?hl=ko#recycle()">recycle()</a> 기능을 제공하는데, 이 메소드를 실행하면 비트맵에 사용한 메모리를 회수할 수 있다. 즉, 이 메소드를 호출함으로써 해당 비트맵은 GC의 대상이 된다. 당연히 해당 비트맵을 더이상 사용하지 않을 거라고 확정된 시점에 호출해야한다.</p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8868044834754772"     crossorigin="anonymous"></script><p><ins class="adsbygoogle"     style="display:block; text-align:center;"     data-ad-layout="in-article"     data-ad-format="fluid"     data-ad-client="ca-pub-8868044834754772"     data-ad-slot="1292114373"></ins></p><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script><h1 id="Glide는-비트맵의-메모리를-어떻게-관리하고-있는가"><a href="#Glide는-비트맵의-메모리를-어떻게-관리하고-있는가" class="headerlink" title="Glide는 비트맵의 메모리를 어떻게 관리하고 있는가?"></a>Glide는 비트맵의 메모리를 어떻게 관리하고 있는가?</h1><p>위와 같은 방법으로 오류를 해결하긴 했으나 정확히 Glide에서 Bitmap의 메모리 관리를 어떻게 하는지 감이 안 잡혔더랬다. 그래서 참고삼아 다음 내용을 같이 살펴보면 좋을 것 같다.</p><p>잘 살펴보면 위의 오류 내용을 담은 스샷에서 LruResourceCache 와 같은 단어를 볼 수 있다. <a href="https://www.notion.so/vs-afbdf4b7739647969997e16fd79e7507">메모리 캐시 vs 디스크 캐시</a> 의 내용에 따르면 <code>비트맵 캐싱은 LruCache를 사용하는 대표적인 예</code>다. 여기서 힌트를 얻어서 Glide를 적용하면서 설정했던 BitmapPool 사이즈 디폴트값을 보자. 관련 코드는 다음과 같다.</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 비트맵 풀: The default size is based on the screen size and density of the device</span></span><br><span class="line"><span class="keyword">int</span> bitmapPoolSizeBytes = <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">30</span>; <span class="comment">// 30mb</span></span><br><span class="line">builder.setBitmapPool(<span class="keyword">new</span> LruBitmapPool(bitmapPoolSizeBytes));</span><br></pre></td></tr></table></figure><p>BitmapPool 사이즈는 단말의 스크린사이즈와 density 값에 따라 달라진다고 나와있다.</p><h1 id="Glide에서-비트맵의-라이프사이클-링크"><a href="#Glide에서-비트맵의-라이프사이클-링크" class="headerlink" title="Glide에서 비트맵의 라이프사이클 링크"></a>Glide에서 비트맵의 라이프사이클 <a href="https://github.com/bumptech/glide/issues/483#issuecomment-108193950">링크</a></h1><p>Glide에서 비트맵을 관리하는 데에 있어 일반적인 생명주기는 다음과 같다.</p><p><strong>InputStream -&gt; Bitmap -&gt; View -&gt; Memory Cache -&gt; Bitmap Pool -&gt; Recycle</strong></p><h2 id="해당-링크-해석본"><a href="#해당-링크-해석본" class="headerlink" title="해당 링크 해석본"></a>해당 링크 해석본</h2><p>비트맵은 메모리 캐시 또는 BitmapPool에서 View(또는 target) 및 Loop로 이동할 수도 있습니다. 디코딩 파이프 라인 (예 : 변환을 통해) 중에 리소스를 수동으로 재활용하는 경우 비트맵이 표시되지 않고 recycled state가 될 수도 있습니다. 그렇지 않으면 비트맵이 크기 제약으로 인해 제거될 때 메모리 캐시에서 BitmapPool로, BitmapPool에서 recycled state로 이동합니다.</p><p>“Cannot obtain size for recycled Bitmap” 오류는 Recycle state에 도달한 비트맵을 그리려고 할 때 발생합니다. 결코 발생해서는 안되지만 다음과 같은 몇 가지 시나리오에서 발생할 수 있습니다.</p><ol><li><p>변환 중에 디코딩 프로세스 중에 비트맵을 수동으로 recycle할 경우</p><p> 이 원인은 일반적이지 않은 브랜치에서 커스텀 변환을 하지 않는 한 이런 상황을 꽤 자주 볼 수 있습니다.</p></li><li><p>디코딩 프로세스 중, 변환 중에 두 번 이상 Pool에 비트맵을 반환한 경우</p><p> 이 경우 문제의 원인을 파악하기 쉽습니다. 비트맵이 Pool에서 제거되지 않고 Pool에 여러 번 추가되면 다른 이미지가 동시에 표시되어, 두 개의 이미지 중 하나는 올바르게 표시되고 다른 하나는 잘못 표시 될 수 있습니다. 게다가 다른 뷰에서 참조하는 동안 동시에 recycle 될 수도 있습니다.</p></li><li><p>onLoadCleared가 호출된 후에도 계속 리소스를 참조하거나, 또는 해당 Target이 지워진 후 Target에 로드된 리소스를 참조한 경우</p><p> 커스텀 target을 사용하는 경우 발생할 수 있습니다.</p></li></ol><p>안타깝게도 비트맵을 추적하기 위해 수동 참조 계산을 수행해야하므로 이러한 종류의 버그를 추적하는 것이 매우 어려울 수 있습니다.<br>BitmapPool의 크기를 크게 줄이거나 BitmapPoolAdapter를 사용하여 충돌이 더 자주 발생하는지 확인하십시오. 메모리 캐시의 크기를 줄일 수도 있습니다. 두 경우 모두 파이프 라인의 길이를 줄입니다. 이는 Bitmap이 Recycled state에 더 빨리 도달하여 오류가 더 자주 발생할 수 있음을 의미합니다. 또한 비트맵 렌더링 오류, 기록 된 GL 경고 또는 다른 이미지 대신 잘못된 이미지가 나타나는지 주시하십시오. 이 모든 것은 버그를 재현한 신호입니다.</p><h1 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h1><p>따라서 Glide는 변환된 Bitmap을 내부적으로 recycle하기 때문에 <code>imageView.setRecycler()</code>하지 않아도 된다.</p>]]></content:encoded>
-      
-      
-      <category domain="https://dl137584.github.io/categories/Android/">Android</category>
-      
-      
-      
-      <comments>https://dl137584.github.io/2022/02/01/004-the-way-bitmap-gc-in-glide/#disqus_thread</comments>
       
     </item>
     
