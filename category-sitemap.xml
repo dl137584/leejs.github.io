@@ -9,6 +9,13 @@
 
 
     <url>
+        <loc>https://dl137584.github.io/categories/BOOK/</loc>
+        <lastmod>2022-06-17T12:01:52.564Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://dl137584.github.io/categories/Android/</loc>
         <lastmod>2022-06-14T16:35:19.556Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -18,13 +25,6 @@
     <url>
         <loc>https://dl137584.github.io/categories/ARTICLE/</loc>
         <lastmod>2022-06-14T15:40:35.315Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://dl137584.github.io/categories/BOOK/</loc>
-        <lastmod>2022-06-14T15:40:33.015Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
