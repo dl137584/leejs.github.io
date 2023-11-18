@@ -9,11 +9,11 @@
     <atom:link href="https://dl137584.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 18 Nov 2023 18:45:31 GMT</pubDate>
+    <pubDate>Sat, 18 Nov 2023 18:47:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>[번역: Kotlin Coroutines: Deep Dive] 왜 Kotlin Coroutines를 사용하는가</title>
+      <title>[번역: Kotlin Coroutines: Deep Dive] Kotlin Coroutines를 사용하는 이유</title>
       <link>https://dl137584.github.io/2023/11/19/028-kotlin-coroutines-deep-dive-01/</link>
       <guid>https://dl137584.github.io/2023/11/19/028-kotlin-coroutines-deep-dive-01/</guid>
       <pubDate>Sat, 18 Nov 2023 18:04:29 GMT</pubDate>
