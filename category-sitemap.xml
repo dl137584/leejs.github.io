@@ -9,6 +9,13 @@
 
 
     <url>
+        <loc>https://dl137584.github.io/categories/Kotlin/</loc>
+        <lastmod>2023-11-19T15:42:37.862Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://dl137584.github.io/categories/Translation/</loc>
         <lastmod>2023-11-18T18:47:40.087Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -32,13 +39,6 @@
     <url>
         <loc>https://dl137584.github.io/categories/Android/</loc>
         <lastmod>2022-06-14T16:35:19.556Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://dl137584.github.io/categories/Kotlin/</loc>
-        <lastmod>2022-05-02T13:33:04.834Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
